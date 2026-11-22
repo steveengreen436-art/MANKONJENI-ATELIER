@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MANKONJENI ATELIER | Vivid Live Glass Wallpaper — Perfumes, Makeup, Tupperware, Hair, Herbal & Bridal</title>
+  <title>MANKONJENI ATELIER | Vivid Live Glass Wallpaper — Perfumes, Watches, Fashion, Makeup, Tupperware, Hair, Herbal & Bridal</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -29,7 +29,6 @@
     @media (min-width: 768px) {
       body { padding-bottom: 0; }
     }
-    /* Vivid full-screen live wallpaper canvas */
     #live-wallpaper-canvas {
       position: fixed;
       inset: 0;
@@ -38,7 +37,6 @@
       z-index: -2;
       display: block;
     }
-    /* Light glass veil kept subtle so vivid motion shines clearly while keeping text high-contrast */
     .wallpaper-glass-veil {
       position: fixed;
       inset: 0;
@@ -137,9 +135,11 @@
       </button>
 
       <!-- Desktop Page Redirect Links -->
-      <div class="hidden xl:flex items-center gap-3.5 text-[11px] uppercase tracking-wider font-bold text-[#4a3525]">
+      <div class="hidden 2xl:flex items-center gap-3 text-[11px] uppercase tracking-wider font-bold text-[#4a3525]">
         <a href="?page=home" onclick="onPageLink(event, 'home')" data-nav-page="home" class="nav-page-link hover:text-[#8b5a2b] transition">Home</a>
         <a href="?page=perfumes" onclick="onPageLink(event, 'perfumes')" data-nav-page="perfumes" class="nav-page-link hover:text-[#8b5a2b] transition">Perfumes</a>
+        <a href="?page=smart-watches" onclick="onPageLink(event, 'smart-watches')" data-nav-page="smart-watches" class="nav-page-link hover:text-[#8b5a2b] transition">Smart Watches</a>
+        <a href="?page=fashion-apparel" onclick="onPageLink(event, 'fashion-apparel')" data-nav-page="fashion-apparel" class="nav-page-link hover:text-[#8b5a2b] transition">Fashion & Tops</a>
         <a href="?page=makeup-kit" onclick="onPageLink(event, 'makeup-kit')" data-nav-page="makeup-kit" class="nav-page-link hover:text-[#8b5a2b] transition">Makeup Kit</a>
         <a href="?page=tupperware" onclick="onPageLink(event, 'tupperware')" data-nav-page="tupperware" class="nav-page-link hover:text-[#8b5a2b] transition">Tupperware</a>
         <a href="?page=hair-styling" onclick="onPageLink(event, 'hair-styling')" data-nav-page="hair-styling" class="nav-page-link hover:text-[#8b5a2b] transition">Hair & Styling</a>
@@ -165,10 +165,12 @@
       </div>
     </div>
 
-    <!-- Mobile Portrait Horizontal Page Redirect Bar -->
-    <div class="xl:hidden border-t border-[#d7c3a8] bg-[#efe6d8]/90 backdrop-blur-md px-2 py-1.5 flex items-center gap-1.5 overflow-x-auto text-[11px] font-bold">
+    <!-- Mobile / Tablet Horizontal Page Redirect Bar -->
+    <div class="2xl:hidden border-t border-[#d7c3a8] bg-[#efe6d8]/90 backdrop-blur-md px-2 py-1.5 flex items-center gap-1.5 overflow-x-auto text-[11px] font-bold">
       <a href="?page=home" onclick="onPageLink(event, 'home')" data-nav-page="home" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Home</a>
       <a href="?page=perfumes" onclick="onPageLink(event, 'perfumes')" data-nav-page="perfumes" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Perfumes</a>
+      <a href="?page=smart-watches" onclick="onPageLink(event, 'smart-watches')" data-nav-page="smart-watches" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Smart Watches</a>
+      <a href="?page=fashion-apparel" onclick="onPageLink(event, 'fashion-apparel')" data-nav-page="fashion-apparel" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Fashion & Tops</a>
       <a href="?page=makeup-kit" onclick="onPageLink(event, 'makeup-kit')" data-nav-page="makeup-kit" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Makeup Kit</a>
       <a href="?page=tupperware" onclick="onPageLink(event, 'tupperware')" data-nav-page="tupperware" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Tupperware</a>
       <a href="?page=hair-styling" onclick="onPageLink(event, 'hair-styling')" data-nav-page="hair-styling" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Hair & Styling</a>
@@ -189,7 +191,7 @@
           Curated by <span class="brown-gradient-text italic">Mankonjeni</span>, Delivered to Your Door.
         </h1>
         <p class="text-sm sm:text-base text-[#3d291c] leading-relaxed max-w-2xl mx-auto lg:mx-0">
-          Home delivery across <strong>Johannesburg, Soweto, Bez Valley</strong>, and surrounding areas. Explore separate pages for <strong>Glass & High-Concentration Oil Perfumes (Men & Women)</strong>, <strong>Makeup Kits</strong>, <strong>Tupperware</strong>, <strong>Hair Dressing & Styling</strong>, <strong>Herbal Medication</strong>, and <strong>Bridal & Events Makeup at Home</strong>—with interactive measurement scales, detailed notes, ZAR pricing, and cart checkout via <strong>+27 64 017 7796 (Thoe)</strong>.
+          Home delivery across <strong>Johannesburg, Soweto, Bez Valley</strong>, and surrounding areas. Explore separate pages for <strong>Glass & High-Concentration Oil Perfumes (Men & Women)</strong>, <strong>Smart Watches</strong>, <strong>Fashion & Rhinestone Tops</strong>, <strong>Makeup Kits</strong>, <strong>Tupperware</strong>, <strong>Hair Dressing & Styling</strong>, <strong>Herbal Medication</strong>, and <strong>Bridal & Events Makeup at Home</strong>—with interactive measurement scales, detailed notes, ZAR pricing, and cart checkout via <strong>+27 64 017 7796 (Thoe)</strong>.
         </p>
 
         <div class="flex flex-wrap gap-2.5 justify-center lg:justify-start pt-1">
@@ -199,11 +201,11 @@
           <a href="https://wa.me/27640177796?text=Hello%20Thoe!%20I%20am%20visiting%20Mankonjeni%20Atelier%20for%20delivery%20in%20Johannesburg%20%2F%20Soweto%20%2F%20Bez%20Valley." target="_blank" rel="noopener" class="luxe-btn font-extrabold px-5 py-2.5 rounded-full text-xs sm:text-sm shadow transition">
             💬 WhatsApp Thoe
           </a>
-          <button onclick="redirectToPage('perfumes')" class="bg-[#fffdf9]/90 hover:bg-[#e4d6c3] border border-[#8b5a2b] text-[#6f4524] font-extrabold px-4 py-2.5 rounded-full text-xs sm:text-sm transition">
-            ✨ Glass & Oil Perfumes Page →
+          <button onclick="redirectToPage('smart-watches')" class="bg-[#fffdf9]/90 hover:bg-[#e4d6c3] border border-[#8b5a2b] text-[#6f4524] font-extrabold px-4 py-2.5 rounded-full text-xs sm:text-sm transition">
+            ⌚ Smart Watches Page →
           </button>
-          <button onclick="redirectToPage('cart')" class="bg-[#fffdf9]/90 hover:bg-[#e4d6c3] border border-[#8b5a2b] text-[#6f4524] font-extrabold px-4 py-2.5 rounded-full text-xs sm:text-sm transition">
-            🛍️ Open Cart (<span class="cart-count-badge">0</span>)
+          <button onclick="redirectToPage('fashion-apparel')" class="bg-[#fffdf9]/90 hover:bg-[#e4d6c3] border border-[#8b5a2b] text-[#6f4524] font-extrabold px-4 py-2.5 rounded-full text-xs sm:text-sm transition">
+            ✨ Fashion & Tops Page →
           </button>
         </div>
       </div>
@@ -219,43 +221,53 @@
             <span>1. Perfumes Page (Men & Women Glass + Oil Perfumes)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
+          <button onclick="redirectToPage('smart-watches')" class="flex items-center justify-between bg-[#efe6d8]/90 hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>2. Smart Watches Page (QAGSFLC Watch & Full Catalog)</span>
+            <span class="text-[#8b5a2b]">Redirect →</span>
+          </button>
+          <button onclick="redirectToPage('fashion-apparel')" class="flex items-center justify-between bg-[#efe6d8]/90 hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>3. Fashion & Tops Page (Rhinestone Camisole & Full Catalog)</span>
+            <span class="text-[#8b5a2b]">Redirect →</span>
+          </button>
           <button onclick="redirectToPage('makeup-kit')" class="flex items-center justify-between bg-[#efe6d8]/90 hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>2. Makeup Kit Page (Full Catalog)</span>
+            <span>4. Makeup Kit Page (Full Catalog)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
           <button onclick="redirectToPage('tupperware')" class="flex items-center justify-between bg-[#efe6d8]/90 hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>3. Tupperware Products Page (Spoons to Large Dishes)</span>
+            <span>5. Tupperware Products Page (Spoons to Large Dishes)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
           <button onclick="redirectToPage('hair-styling')" class="flex items-center justify-between bg-[#efe6d8]/90 hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>4. Hair Dressing & Styling Page (Full Catalog)</span>
+            <span>6. Hair Dressing & Styling Page (Full Catalog)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
           <button onclick="redirectToPage('herbal-medication')" class="flex items-center justify-between bg-[#efe6d8]/90 hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>5. Herbal Medication Page (Full Catalog)</span>
+            <span>7. Herbal Medication Page (Full Catalog)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
           <button onclick="redirectToPage('bridal-events')" class="flex items-center justify-between bg-[#efe6d8]/90 hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>6. Bridal & Events Makeup at Home Page (All Events)</span>
+            <span>8. Bridal & Events Makeup at Home Page (All Events)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
         </div>
       </div>
     </div>
 
-    <!-- 6 Separate Page Cards -->
+    <!-- Dedicated Page Cards Grid -->
     <div id="home-pages-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
   </section>
 
   <!-- ==================== DEDICATED PRODUCT / SERVICE PAGES ==================== -->
   <section id="page-perfumes" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-smart-watches" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-fashion-apparel" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
   <section id="page-makeup-kit" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
   <section id="page-tupperware" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
   <section id="page-hair-styling" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
   <section id="page-herbal-medication" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
   <section id="page-bridal-events" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
 
-  <!-- ==================== PAGE 8: CART (?page=cart) ==================== -->
+  <!-- ==================== CART PAGE (?page=cart) ==================== -->
   <section id="page-cart" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12">
     <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
       <div>
@@ -269,7 +281,6 @@
     </div>
 
     <div class="glass-luxe rounded-3xl p-5 sm:p-8 grid lg:grid-cols-12 gap-8">
-      <!-- Cart Contents -->
       <div class="lg:col-span-7 space-y-4">
         <h3 class="font-luxury text-2xl font-bold text-[#2b1d14] border-b border-[#d7c3a8] pb-3">
           Added Items & Bookings (<span class="cart-count-badge">0</span>)
@@ -277,7 +288,6 @@
         <div id="cart-contents-list" class="space-y-3 min-h-[140px]"></div>
       </div>
 
-      <!-- Checkout & Delivery Area -->
       <div class="lg:col-span-5 cream-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between space-y-5">
         <div class="space-y-3.5">
           <h3 class="font-luxury text-2xl font-bold text-[#2b1d14] border-b border-[#e4d6c3] pb-2">Delivery & Order Summary</h3>
@@ -366,7 +376,6 @@
       let pointerX = 0.5, pointerY = 0.5;
       let smoothX = 0.5, smoothY = 0.5;
 
-      // High-contrast light-brown, warm beige & cream silk waves
       const ribbons = [
         { baseY: 0.20, amp: 95, freq: 0.0028, speed: 0.0019, phase: 0.0, fill: 'rgba(186, 138, 92, 0.34)', stroke: 'rgba(255, 255, 255, 0.92)', lw: 3 },
         { baseY: 0.44, amp: 118, freq: 0.0022, speed: -0.0015, phase: 1.7, fill: 'rgba(155, 104, 60, 0.28)', stroke: 'rgba(255, 250, 240, 0.88)', lw: 3 },
@@ -374,7 +383,6 @@
         { baseY: 0.88, amp: 78, freq: 0.0036, speed: -0.0021, phase: 5.0, fill: 'rgba(139, 90, 43, 0.26)', stroke: 'rgba(255, 252, 245, 0.85)', lw: 2.5 }
       ];
 
-      // Luminous floating glass bokeh & golden-brown light orbs
       const orbs = Array.from({ length: 24 }, (_, i) => ({
         xRatio: (i * 0.19 + 0.05) % 1,
         yRatio: (i * 0.31 + 0.09) % 1,
@@ -385,7 +393,6 @@
         isRichBrown: i % 2 === 0
       }));
 
-      // Floating rotating translucent glass facets / prisms
       const glassShards = Array.from({ length: 12 }, (_, i) => ({
         xRatio: (i * 0.23 + 0.11) % 1,
         yRatio: (i * 0.37 + 0.14) % 1,
@@ -428,7 +435,6 @@
         const parallaxX = (smoothX - 0.5) * 65;
         const parallaxY = (smoothY - 0.5) * 50;
 
-        // Sweeping warm cream, beige & light-brown gradient backdrop
         const shiftX = width * (0.5 + Math.cos(now * 0.00065) * 0.32 + (smoothX - 0.5) * 0.22);
         const shiftY = height * (0.48 + Math.sin(now * 0.00055) * 0.28 + (smoothY - 0.5) * 0.22);
         const bgGrad = ctx.createRadialGradient(shiftX, shiftY, Math.min(width, height) * 0.04, width * 0.5, height * 0.5, Math.max(width, height) * 0.95);
@@ -439,7 +445,6 @@
         ctx.fillStyle = bgGrad;
         ctx.fillRect(0, 0, width, height);
 
-        // Moving luminous bokeh orbs
         for (const o of orbs) {
           o.xRatio += o.vx;
           o.yRatio += o.vy;
@@ -469,7 +474,6 @@
           ctx.fill();
         }
 
-        // Flowing silk waves with bright glass crest highlights
         const step = Math.max(14, Math.floor(width / 64));
         for (const rib of ribbons) {
           ctx.beginPath();
@@ -492,7 +496,6 @@
           ctx.fill();
         }
 
-        // Drifting rotating glass facets
         for (const sh of glassShards) {
           sh.xRatio += sh.vx;
           sh.yRatio += sh.vy;
@@ -525,7 +528,7 @@
     })();
 
     const PHONE_THOE = '27640177796';
-    const CART_STORAGE_KEY = 'mankonjeni_atelier_cart_zar_v5';
+    const CART_STORAGE_KEY = 'mankonjeni_atelier_cart_zar_v6';
 
     const DEPARTMENT_PAGES = {
       'perfumes': {
@@ -558,6 +561,56 @@
           { name: 'High-Concentration Sandalwood, Vetiver & Spices Oil (Men)', explanation: 'Rich, non-alcoholic oil extract with warm spice and dry woods for men who prefer concentrated fragrance oils.', basePrice: 300 },
           { name: 'Unisex Saffron, Amberwood & Cedar Glass Extrait', explanation: 'Notes: Saffron Threads, Amberwood, Atlas Cedar. Balanced luxury glass fragrance worn by both men and women.', basePrice: 590 },
           { name: 'Couples Glass & Oil Fragrance Duo (His & Hers)', explanation: 'Paired men’s and women’s glass/oil fragrances curated for gifting, anniversaries, and bridal/event occasions.', basePrice: 890 }
+        ]
+      },
+      'smart-watches': {
+        pageId: 'page-smart-watches',
+        title: 'Smart Watches Page',
+        badge: 'QAGSFLC UNISEX SMART SPORTS WATCH & WEARABLE CATALOG',
+        overview: 'Featured QAGSFLC Unisex Smart Sports Watch (from your screenshot—wireless call & message notifications, pedometer, calorie & distance tracking, multiple sports modes, music control, remote camera, alarm reminder, 180mAh battery & USB charging) plus a full wearable catalog for everyday fitness and holiday gifting.',
+        scaleTitle: 'Strap / Wrist Fit & Battery Tier Scale (mm)',
+        scaleUnit: 'mm Case / Strap',
+        minVal: 38,
+        maxVal: 49,
+        stepVal: 1,
+        defaultVal: 42,
+        scaleCaption: (v) => v <= 41 ? 'Compact Unisex / Slim Wrist Fit (38–41 mm) — Lightweight daily & sleep wear' : (v <= 45 ? 'Standard Unisex Sports Fit (42–45 mm) — Balanced screen & 180mAh USB battery' : 'Bold Wide-Display Sports Fit (46–49 mm) — High-visibility outdoor & workout view'),
+        optionsLabel: 'Strap & Finish Edition',
+        options: ['Classic Matte Black', 'Warm Beige & Sand', 'Caramel Light Brown', 'Holiday Gift Bundle'],
+        pricePerStep: 8,
+        products: [
+          { name: 'QAGSFLC Unisex Smart Sports Watch (Featured — R144 Base)', explanation: 'Unisex smart sports watch featuring wireless call & message notifications, pedometer, calorie & distance tracking, multiple sports modes, music control, remote camera, alarm reminder, 180mAh battery, USB charging & smartphone compatibility.', basePrice: 144 },
+          { name: 'QAGSFLC Holiday Gift Edition Smart Sports Watch Set', explanation: 'Unisex QAGSFLC smart sports watch paired with an extra interchangeable strap for holiday gifting, workouts, and daily wear.', basePrice: 189 },
+          { name: 'QAGSFLC Fitness & Step-Counter Edition Watch', explanation: 'Focused on pedometer step counts, distance tracking, calorie burn logs, alarm reminders, and USB charging.', basePrice: 154 },
+          { name: 'QAGSFLC Multi-Sport Training & Music Control Watch', explanation: 'Supports multiple sports modes, music playback control, remote camera shutter, and wireless alerts.', basePrice: 164 },
+          { name: 'Replacement USB Charging Cable & Magnetic Dock', explanation: 'Convenient USB charger for keeping your smart sports watch powered at home, work, or on the go.', basePrice: 75 },
+          { name: 'Interchangeable Silicone & Woven Sports Straps (2-Pack)', explanation: 'Swap watch straps effortlessly to match workout gear, casual outfits, or warm beige/brown tones.', basePrice: 95 },
+          { name: 'Couples Unisex Smart Sports Watch Duo (His & Hers)', explanation: 'Two unisex smart sports watches with wireless call/message alerts, pedometers, alarms, and USB charging.', basePrice: 275 }
+        ]
+      },
+      'fashion-apparel': {
+        pageId: 'page-fashion-apparel',
+        title: 'Fashion & Tops Page',
+        badge: 'WOMEN’S RHINESTONE CAMISOLE TOPS & AESTHETIC APPAREL CATALOG',
+        overview: 'Featured Women’s Casual Sleeveless Square Neck Rhinestone Camisole Top in Slim Fit Summer White (from your screenshot) expanded into a full fashion & apparel catalog of rhinestone camisoles, square-neck tops, summer aesthetics, and coordinating pieces.',
+        scaleTitle: 'Size & Fit Measurement Scale (US/EU Size Index)',
+        scaleUnit: ' Size (XS=2 to XXL=12)',
+        minVal: 2,
+        maxVal: 12,
+        stepVal: 2,
+        defaultVal: 4,
+        scaleCaption: (v) => v <= 4 ? 'Slim / Petite Fit (XS–S) — Hugging square-neck & camisole silhouette' : (v <= 8 ? 'Regular / True-to-Size Fit (M–L) — Everyday casual & evening comfort' : 'Relaxed / Plus Fit (XL–XXL) — Generous drape & breathable ease'),
+        optionsLabel: 'Colorway & Embellishment',
+        options: ['Summer White + Rhinestone', 'Cream Beige + Crystal Trim', 'Warm Caramel + Gold Accent', 'Soft Sand + Pearl Detail'],
+        pricePerStep: 12,
+        products: [
+          { name: 'Women’s Casual Sleeveless Square Neck Rhinestone Camisole Top (Summer White — R87 Base)', explanation: 'Slim-fit sleeveless square-neck camisole top in a summer white aesthetic with sparkling rhinestone detailing for casual outings and warm days.', basePrice: 87 },
+          { name: 'Square Neck Rhinestone Camisole Top (Warm Cream & Sand)', explanation: 'Flattering square neckline and slim-fit cut with subtle rhinestone sparkle in a soft cream-beige shade.', basePrice: 94 },
+          { name: 'Square Neck Rhinestone Camisole Top (Light Caramel Brown)', explanation: 'Warm light-brown tone paired with a clean square neck, sleeveless cut, and rhinestone trim.', basePrice: 96 },
+          { name: 'Summer Aesthetic Ribbed Square-Neck Tank (2-Pack)', explanation: 'Two versatile sleeveless square-neck tops in summer white and warm beige for layering or solo wear.', basePrice: 155 },
+          { name: 'Evening & Party Rhinestone Strap Camisole', explanation: 'Slim-fit sleeveless camisole with extra rhinestone strap shine for dinners, parties, and celebrations.', basePrice: 118 },
+          { name: 'High-Waist Relaxed Linen-Blend Trousers (Warm Beige)', explanation: 'Breathable, flowing trousers in warm beige that pair effortlessly with slim-fit square-neck camisoles.', basePrice: 245 },
+          { name: '3-Piece Summer Aesthetic Outfit Bundle', explanation: 'Includes the Square Neck Rhinestone Camisole Top, matching bottoms, and layered accessory piece.', basePrice: 295 }
         ]
       },
       'makeup-kit': {
@@ -742,7 +795,7 @@
             <h2 class="font-luxury text-2xl sm:text-3xl font-bold text-[#2b1d14] mt-3">${cfg.title}</h2>
             <p class="text-xs sm:text-sm text-[#3d291c] mt-2 leading-relaxed">${cfg.overview}</p>
             <p class="text-[11px] text-[#6f4524] mt-3 bg-[#fffdf9]/85 p-3 rounded-xl border border-[#dfd0bc] font-semibold">
-              Includes: ${cfg.products.length} catalog entries, notes & explanations, ${cfg.scaleTitle}, ZAR prices & Cart redirect.
+              Includes: ${cfg.products.length} catalog entries, detailed specs & notes, ${cfg.scaleTitle}, ZAR prices & Cart redirect.
             </p>
           </div>
           <button onclick="redirectToPage('${key}')" class="mt-5 w-full py-3 rounded-xl luxe-btn font-extrabold text-xs uppercase tracking-wider shadow transition">
@@ -978,6 +1031,8 @@
             <p class="text-xs text-[#6b5344]">Redirect to any page below to pick a scale setting, read product details, and add items:</p>
             <div class="flex flex-wrap justify-center gap-2 pt-2 text-xs font-bold">
               <button onclick="redirectToPage('perfumes')" class="luxe-btn px-3.5 py-2 rounded-xl">Perfumes</button>
+              <button onclick="redirectToPage('smart-watches')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Smart Watches</button>
+              <button onclick="redirectToPage('fashion-apparel')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Fashion & Tops</button>
               <button onclick="redirectToPage('makeup-kit')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Makeup Kit</button>
               <button onclick="redirectToPage('tupperware')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Tupperware</button>
               <button onclick="redirectToPage('hair-styling')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Hair & Styling</button>
@@ -1055,7 +1110,7 @@
     }
 
     // Separate Page Redirect Router (?page=...)
-    const VALID_PAGES = ['home', 'perfumes', 'makeup-kit', 'tupperware', 'hair-styling', 'herbal-medication', 'bridal-events', 'cart'];
+    const VALID_PAGES = ['home', 'perfumes', 'smart-watches', 'fashion-apparel', 'makeup-kit', 'tupperware', 'hair-styling', 'herbal-medication', 'bridal-events', 'cart'];
 
     function getCurrentPageFromUrl() {
       const params = new URLSearchParams(window.location.search);
