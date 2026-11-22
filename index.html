@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MANKONJENI ATELIER | Full Catalogs — Makeup, Tupperware, Hair, Herbal & Home Bridal</title>
+  <title>MANKONJENI ATELIER | Perfumes, Makeup, Tupperware, Hair, Herbal & Home Bridal</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -33,7 +33,7 @@
       font-family: 'Cormorant Garamond', serif;
     }
     .brown-gradient-text {
-      background: linear-gradient(135deg, #6f4524 0%, #a47148 55%, #c59b6d 100%);
+      background: linear-gradient(135deg, #5e381b 0%, #a47148 52%, #c99e6d 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -45,19 +45,42 @@
       background: linear-gradient(135deg, #8b5a2b 0%, #6f4524 100%);
     }
     .glass-luxe {
-      background: #efe6d8;
+      background: rgba(239, 230, 216, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid #d7c3a8;
-      box-shadow: 0 14px 32px -12px rgba(107, 83, 68, 0.16);
+      box-shadow: 0 16px 36px -12px rgba(107, 83, 68, 0.18);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .glass-luxe:hover {
+      transform: translateY(-2px);
+      border-color: #a47148;
+      box-shadow: 0 22px 44px -14px rgba(139, 90, 43, 0.24);
     }
     .cream-card {
       background: #fffdf9;
       border: 1px solid #dfd0bc;
     }
     .store-page { display: none; }
-    .store-page.active { display: block; animation: pageFade 0.22s ease-out; }
+    .store-page.active { display: block; animation: pageFade 0.24s ease-out; }
     @keyframes pageFade {
-      from { opacity: 0; transform: translateY(5px); }
+      from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    /* Live ambient warm cream & light-brown shimmer orbs */
+    .ambient-orb {
+      position: fixed;
+      border-radius: 9999px;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(55px);
+      opacity: 0.42;
+      animation: driftOrb 14s ease-in-out infinite alternate;
+    }
+    @keyframes driftOrb {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(28px, -22px) scale(1.07); }
+      100% { transform: translate(-20px, 18px) scale(0.96); }
     }
     .scale-bar-fill { transition: width 0.25s ease; }
     ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -65,10 +88,15 @@
     ::-webkit-scrollbar-thumb { background: #b58963; border-radius: 999px; }
   </style>
 </head>
-<body class="antialiased selection:bg-[#d8c3a5] selection:text-[#2b1d14]">
+<body class="antialiased selection:bg-[#d8c3a5] selection:text-[#2b1d14] relative">
+
+  <!-- Live Background Ambient Glows (Beige, Cream & Light Brown) -->
+  <div class="ambient-orb w-80 h-80 -top-16 -left-16 bg-[#e2ccb0]" style="animation-delay: 0s;"></div>
+  <div class="ambient-orb w-96 h-96 top-1/3 -right-24 bg-[#d5b895]" style="animation-delay: -5s;"></div>
+  <div class="ambient-orb w-80 h-80 bottom-10 left-1/4 bg-[#eadbc6]" style="animation-delay: -9s;"></div>
 
   <!-- Top Banner -->
-  <div class="bg-[#e4d6c3] border-b border-[#cfb99d] text-[#3d291c] text-[11px] sm:text-xs py-2 px-3 text-center font-medium tracking-wide">
+  <div class="bg-[#e4d6c3] border-b border-[#cfb99d] text-[#3d291c] text-[11px] sm:text-xs py-2 px-3 text-center font-medium tracking-wide relative z-50">
     ✨ <strong>MANKONJENI ATELIER</strong> • Home Delivery Across <strong>Johannesburg, Soweto, Bez Valley</strong> & Surrounds • Contact: <strong>+27 64 017 7796 (Thoe)</strong>
   </div>
 
@@ -88,8 +116,9 @@
       </button>
 
       <!-- Desktop Page Redirect Links -->
-      <div class="hidden xl:flex items-center gap-4 text-[11px] uppercase tracking-wider font-bold text-[#4a3525]">
+      <div class="hidden xl:flex items-center gap-3.5 text-[11px] uppercase tracking-wider font-bold text-[#4a3525]">
         <a href="?page=home" onclick="onPageLink(event, 'home')" data-nav-page="home" class="nav-page-link hover:text-[#8b5a2b] transition">Home</a>
+        <a href="?page=perfumes" onclick="onPageLink(event, 'perfumes')" data-nav-page="perfumes" class="nav-page-link hover:text-[#8b5a2b] transition">Perfumes</a>
         <a href="?page=makeup-kit" onclick="onPageLink(event, 'makeup-kit')" data-nav-page="makeup-kit" class="nav-page-link hover:text-[#8b5a2b] transition">Makeup Kit</a>
         <a href="?page=tupperware" onclick="onPageLink(event, 'tupperware')" data-nav-page="tupperware" class="nav-page-link hover:text-[#8b5a2b] transition">Tupperware</a>
         <a href="?page=hair-styling" onclick="onPageLink(event, 'hair-styling')" data-nav-page="hair-styling" class="nav-page-link hover:text-[#8b5a2b] transition">Hair & Styling</a>
@@ -118,6 +147,7 @@
     <!-- Mobile Portrait Horizontal Page Redirect Bar -->
     <div class="xl:hidden border-t border-[#d7c3a8] bg-[#efe6d8] px-2 py-1.5 flex items-center gap-1.5 overflow-x-auto text-[11px] font-bold">
       <a href="?page=home" onclick="onPageLink(event, 'home')" data-nav-page="home" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Home</a>
+      <a href="?page=perfumes" onclick="onPageLink(event, 'perfumes')" data-nav-page="perfumes" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Perfumes</a>
       <a href="?page=makeup-kit" onclick="onPageLink(event, 'makeup-kit')" data-nav-page="makeup-kit" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Makeup Kit</a>
       <a href="?page=tupperware" onclick="onPageLink(event, 'tupperware')" data-nav-page="tupperware" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Tupperware</a>
       <a href="?page=hair-styling" onclick="onPageLink(event, 'hair-styling')" data-nav-page="hair-styling" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Hair & Styling</a>
@@ -128,7 +158,7 @@
   </nav>
 
   <!-- ==================== PAGE 1: HOME (?page=home) ==================== -->
-  <section id="page-home" class="store-page active max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12">
+  <section id="page-home" class="store-page active relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12">
     <div class="glass-luxe rounded-3xl p-5 sm:p-10 mb-8 grid lg:grid-cols-12 gap-8 items-center">
       <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
         <span class="inline-block bg-[#fffdf9] border border-[#cfb99d] text-[#6f4524] text-[11px] font-bold px-3.5 py-1 rounded-full">
@@ -138,7 +168,7 @@
           Curated by <span class="brown-gradient-text italic">Mankonjeni</span>, Delivered to Your Door.
         </h1>
         <p class="text-sm sm:text-base text-[#5c4636] leading-relaxed max-w-2xl mx-auto lg:mx-0">
-          Home delivery across <strong>Johannesburg, Soweto, Bez Valley</strong>, and surrounding areas. Every department has its own separate interactive page with full product catalogs, explanations, live measurement scales, ZAR pricing, and cart checkout via <strong>+27 64 017 7796 (Thoe)</strong>.
+          Home delivery across <strong>Johannesburg, Soweto, Bez Valley</strong>, and surrounding areas. Explore separate pages for <strong>Glass & High-Concentration Oil Perfumes (Men & Women)</strong>, <strong>Makeup Kits</strong>, <strong>Tupperware</strong>, <strong>Hair Dressing & Styling</strong>, <strong>Herbal Medication</strong>, and <strong>Bridal & Events Makeup at Home</strong>—with interactive measurement scales, detailed notes, ZAR pricing, and cart checkout via <strong>+27 64 017 7796 (Thoe)</strong>.
         </p>
 
         <div class="flex flex-wrap gap-2.5 justify-center lg:justify-start pt-1">
@@ -148,6 +178,9 @@
           <a href="https://wa.me/27640177796?text=Hello%20Thoe!%20I%20am%20visiting%20Mankonjeni%20Atelier%20for%20delivery%20in%20Johannesburg%20%2F%20Soweto%20%2F%20Bez%20Valley." target="_blank" rel="noopener" class="luxe-btn font-extrabold px-5 py-2.5 rounded-full text-xs sm:text-sm shadow transition">
             💬 WhatsApp Thoe
           </a>
+          <button onclick="redirectToPage('perfumes')" class="bg-[#fffdf9] hover:bg-[#e4d6c3] border border-[#8b5a2b] text-[#6f4524] font-extrabold px-4 py-2.5 rounded-full text-xs sm:text-sm transition">
+            ✨ Glass & Oil Perfumes Page →
+          </button>
           <button onclick="redirectToPage('cart')" class="bg-[#fffdf9] hover:bg-[#e4d6c3] border border-[#8b5a2b] text-[#6f4524] font-extrabold px-4 py-2.5 rounded-full text-xs sm:text-sm transition">
             🛍️ Open Cart (<span class="cart-count-badge">0</span>)
           </button>
@@ -156,48 +189,53 @@
 
       <!-- Delivery Zones & Dedicated Pages Quick Card -->
       <div class="lg:col-span-5 cream-card rounded-2xl p-5 space-y-3">
-        <p class="text-xs uppercase tracking-widest text-[#8b5a2b] font-extrabold">Home Delivery Zones</p>
+        <p class="text-xs uppercase tracking-widest text-[#8b5a2b] font-extrabold">Home Delivery Zones & Dedicated Pages</p>
         <p class="text-xs text-[#5c4636] leading-relaxed">
           <strong>Johannesburg</strong> (CBD, Sandton, Rosebank, Yeoville, Kensington), <strong>Soweto</strong> (Orlando, Dobsonville, Maponya/Kliptown, Meadowlands), <strong>Bez Valley</strong> (Bezuidenhout Valley, Bruma, Observatory) & surrounding suburbs.
         </p>
-        <div class="grid grid-cols-1 gap-2 pt-1 text-xs font-bold">
-          <button onclick="redirectToPage('makeup-kit')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>1. Makeup Kit Page (Full Catalog)</span>
+        <div class="grid grid-cols-1 gap-1.5 pt-1 text-xs font-bold">
+          <button onclick="redirectToPage('perfumes')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>1. Perfumes Page (Men & Women Glass + Oil Perfumes)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
-          <button onclick="redirectToPage('tupperware')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>2. Tupperware Products Page (Spoons to Large Dishes)</span>
+          <button onclick="redirectToPage('makeup-kit')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>2. Makeup Kit Page (Full Catalog)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
-          <button onclick="redirectToPage('hair-styling')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>3. Hair Dressing & Styling Page (Full Catalog)</span>
+          <button onclick="redirectToPage('tupperware')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>3. Tupperware Products Page (Spoons to Large Dishes)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
-          <button onclick="redirectToPage('herbal-medication')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>4. Herbal Medication Page (Full Catalog)</span>
+          <button onclick="redirectToPage('hair-styling')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>4. Hair Dressing & Styling Page (Full Catalog)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
-          <button onclick="redirectToPage('bridal-events')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>5. Bridal & Events Makeup at Home Page (All Events)</span>
+          <button onclick="redirectToPage('herbal-medication')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>5. Herbal Medication Page (Full Catalog)</span>
+            <span class="text-[#8b5a2b]">Redirect →</span>
+          </button>
+          <button onclick="redirectToPage('bridal-events')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>6. Bridal & Events Makeup at Home Page (All Events)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
         </div>
       </div>
     </div>
 
-    <!-- 5 Separate Page Cards -->
+    <!-- 6 Separate Page Cards -->
     <div id="home-pages-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
   </section>
 
   <!-- ==================== DEDICATED PRODUCT / SERVICE PAGES ==================== -->
-  <section id="page-makeup-kit" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
-  <section id="page-tupperware" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
-  <section id="page-hair-styling" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
-  <section id="page-herbal-medication" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
-  <section id="page-bridal-events" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-perfumes" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-makeup-kit" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-tupperware" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-hair-styling" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-herbal-medication" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-bridal-events" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
 
-  <!-- ==================== PAGE 7: CART (?page=cart) ==================== -->
-  <section id="page-cart" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12">
+  <!-- ==================== PAGE 8: CART (?page=cart) ==================== -->
+  <section id="page-cart" class="store-page relative z-10 max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12">
     <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
       <div>
         <a href="?page=home" onclick="onPageLink(event, 'home')" class="text-xs text-[#8b5a2b] hover:underline font-bold mb-1 inline-block">← Back to Home</a>
@@ -271,7 +309,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-[#d7c3a8] bg-[#efe6d8] py-8 px-4 text-center sm:text-left">
+  <footer class="border-t border-[#d7c3a8] bg-[#efe6d8] py-8 px-4 text-center sm:text-left relative z-10">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
         <span class="font-luxury text-2xl font-bold brown-gradient-text tracking-widest">MANKONJENI ATELIER</span>
@@ -299,9 +337,41 @@
 
   <script>
     const PHONE_THOE = '27640177796';
-    const CART_STORAGE_KEY = 'mankonjeni_atelier_cart_zar_v2';
+    const CART_STORAGE_KEY = 'mankonjeni_atelier_cart_zar_v3';
 
     const DEPARTMENT_PAGES = {
+      'perfumes': {
+        pageId: 'page-perfumes',
+        title: 'Perfumes Page',
+        badge: 'MEN & WOMEN GLASS PERFUMES & HIGH-CONCENTRATION OIL PERFUMES',
+        overview: 'Full fragrance catalog for men and women featuring heavy glass flacons, Eau de Parfum sprays, and high-concentration perfume oils (attar & oil extracts) with rich top, heart, and base notes—home delivered across Johannesburg, Soweto, Bez Valley & surrounding suburbs.',
+        scaleTitle: 'Bottle Size & Scent Longevity Scale (ml)',
+        scaleUnit: 'ml Flacon',
+        minVal: 15,
+        maxVal: 100,
+        stepVal: 5,
+        defaultVal: 50,
+        scaleCaption: (v) => v <= 25 ? 'Pocket / Roll-On Glass Vial (15–25 ml) — High-concentration oil & travel spray' : (v <= 60 ? 'Signature Glass Flacon (30–60 ml) — Daily & evening wear' : 'Collector Grand Glass Bottle (65–100 ml) — Extended wear & gifting'),
+        optionsLabel: 'Gender & Concentration',
+        options: ['Women • Glass EDP', 'Men • Glass EDP', 'Women • High-Conc. Oil', 'Men • High-Conc. Oil'],
+        pricePerStep: 28,
+        products: [
+          { name: 'Velvet Amber & Vanilla Glass Eau de Parfum (Women)', explanation: 'Notes: Bergamot, Madagascar Vanilla, Warm Amber, Sandalwood. Creamy, sensual glass spray with lingering evening warmth.', basePrice: 480 },
+          { name: 'Rose Oud & Praline Glass Perfume (Women)', explanation: 'Notes: Damask Rose, Pink Pepper, Caramelized Praline, Oud. Rich floral-woody glass bottle suited for events and nights out.', basePrice: 540 },
+          { name: 'White Jasmine & Neroli Glass Perfume (Women)', explanation: 'Notes: Neroli Blossom, White Jasmine, Soft Musk, Cedar. Crisp, luminous daytime glass fragrance.', basePrice: 450 },
+          { name: 'Honeyed Peach & Tonka Bean Glass Perfume (Women)', explanation: 'Notes: White Peach, Tonka Bean, Cashmere Wood. Warm, inviting scent profile in a sculpted glass flacon.', basePrice: 470 },
+          { name: 'High-Concentration Golden Musk & Amber Oil (Women)', explanation: 'Pure concentrated perfume oil in a roller/dropper glass vial—alcohol-free oil base designed for long-lasting skin wear.', basePrice: 290 },
+          { name: 'High-Concentration Vanilla & Rose Attar Oil (Women)', explanation: 'Rich oil-based fragrance blending sweet vanilla bean and soft rose petals for deep, close-to-skin longevity.', basePrice: 310 },
+          { name: 'Royal Oud, Leather & Spiced Cedar Glass Parfum (Men)', explanation: 'Notes: Cardamom, Smoky Oud, Supple Leather, Vetiver. Bold, structured men’s glass fragrance for formal and evening wear.', basePrice: 560 },
+          { name: 'Bergamot, Black Pepper & Vetiver Glass Cologne (Men)', explanation: 'Notes: Calabrian Bergamot, Crushed Pepper, Earthy Vetiver. Sharp, fresh-woody men’s glass spray for daily and office wear.', basePrice: 490 },
+          { name: 'Dark Tobacco, Tonka & Sandalwood Glass Parfum (Men)', explanation: 'Notes: Cured Tobacco Leaf, Roasted Tonka, Creamy Sandalwood. Deep, confident men’s scent in heavy glass.', basePrice: 530 },
+          { name: 'Aqua Citrus, Sage & Driftwood Glass Spray (Men)', explanation: 'Notes: Grapefruit, Clary Sage, Mineral Amber, Driftwood. Clean, crisp men’s fragrance for warm days and active schedules.', basePrice: 460 },
+          { name: 'High-Concentration Black Oud & Ambergris Oil (Men)', explanation: 'Concentrated men’s perfume oil with deep woody-amber character and strong oil-based staying power.', basePrice: 320 },
+          { name: 'High-Concentration Sandalwood, Vetiver & Spices Oil (Men)', explanation: 'Rich, non-alcoholic oil extract with warm spice and dry woods for men who prefer concentrated fragrance oils.', basePrice: 300 },
+          { name: 'Unisex Saffron, Amberwood & Cedar Glass Extrait', explanation: 'Notes: Saffron Threads, Amberwood, Atlas Cedar. Balanced luxury glass fragrance worn by both men and women.', basePrice: 590 },
+          { name: 'Couples Glass & Oil Fragrance Duo (His & Hers)', explanation: 'Paired men’s and women’s glass/oil fragrances curated for gifting, anniversaries, and bridal/event occasions.', basePrice: 890 }
+        ]
+      },
       'makeup-kit': {
         pageId: 'page-makeup-kit',
         title: 'Makeup Kit Page',
@@ -362,7 +432,7 @@
           { name: 'Everyday Drinking Cups / Tumblers (4-Pack)', explanation: 'Lightweight, shatter-resistant cups for water, juice, cold drinks, and family meals.', basePrice: 240 },
           { name: 'Sealed Sippy & On-the-Go Travel Cups (2-Pack)', explanation: 'Spill-resistant cups with secure lids for kids, school, car rides, and desks.', basePrice: 220 },
           { name: 'Small Snack & Dip Containers (4-Pack)', explanation: 'Compact mini containers for nuts, berries, sauces, olives, or lunchbox treats.', basePrice: 180 },
-          { name: ' divided Lunchbox & School/Work Meal Carrier', explanation: 'Keeps mains, sides, and snacks neatly separated without leaking in bags.', basePrice: 265 },
+          { name: 'Divided Lunchbox & School/Work Meal Carrier', explanation: 'Keeps mains, sides, and snacks neatly separated without leaking in bags.', basePrice: 265 },
           { name: 'FridgeSmart Vegetable & Fruit Keeper', explanation: 'Ventilated/sealed fridge storage designed to keep fresh produce crisp and organized.', basePrice: 340 },
           { name: 'Butter, Cheese & Deli Spread Keeper', explanation: 'Compact covered dish sized for butter blocks, cheese, or spreads in the fridge or table.', basePrice: 155 },
           { name: 'Egg Holder & Fridge Organizer Tray', explanation: 'Protects eggs and keeps refrigerator shelves tidy and easy to reach.', basePrice: 230 },
@@ -484,7 +554,7 @@
             <h2 class="font-luxury text-2xl sm:text-3xl font-bold text-[#2b1d14] mt-3">${cfg.title}</h2>
             <p class="text-xs sm:text-sm text-[#5c4636] mt-2 leading-relaxed">${cfg.overview}</p>
             <p class="text-[11px] text-[#6f4524] mt-3 bg-[#fffdf9] p-3 rounded-xl border border-[#dfd0bc] font-semibold">
-              Includes: ${cfg.products.length} full catalog entries, explanations, ${cfg.scaleTitle}, ZAR prices & Cart redirect.
+              Includes: ${cfg.products.length} catalog entries, notes & explanations, ${cfg.scaleTitle}, ZAR prices & Cart redirect.
             </p>
           </div>
           <button onclick="redirectToPage('${key}')" class="mt-5 w-full py-3 rounded-xl luxe-btn font-extrabold text-xs uppercase tracking-wider shadow transition">
@@ -719,7 +789,8 @@
             <p class="text-sm font-bold text-[#2b1d14]">Your cart is empty.</p>
             <p class="text-xs text-[#6b5344]">Redirect to any page below to pick a scale setting, read product details, and add items:</p>
             <div class="flex flex-wrap justify-center gap-2 pt-2 text-xs font-bold">
-              <button onclick="redirectToPage('makeup-kit')" class="luxe-btn px-3.5 py-2 rounded-xl">Makeup Kit</button>
+              <button onclick="redirectToPage('perfumes')" class="luxe-btn px-3.5 py-2 rounded-xl">Perfumes</button>
+              <button onclick="redirectToPage('makeup-kit')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Makeup Kit</button>
               <button onclick="redirectToPage('tupperware')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Tupperware</button>
               <button onclick="redirectToPage('hair-styling')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Hair & Styling</button>
               <button onclick="redirectToPage('herbal-medication')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Herbal Medication</button>
@@ -796,7 +867,7 @@
     }
 
     // Separate Page Redirect Router (?page=...)
-    const VALID_PAGES = ['home', 'makeup-kit', 'tupperware', 'hair-styling', 'herbal-medication', 'bridal-events', 'cart'];
+    const VALID_PAGES = ['home', 'perfumes', 'makeup-kit', 'tupperware', 'hair-styling', 'herbal-medication', 'bridal-events', 'cart'];
 
     function getCurrentPageFromUrl() {
       const params = new URLSearchParams(window.location.search);
@@ -850,4 +921,4 @@
     renderActivePage(getCurrentPageFromUrl());
   </script>
 </body>
-</html>
+  </html>
