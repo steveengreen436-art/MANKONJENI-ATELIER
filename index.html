@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MANKONJENI ATELIER | Makeup, Tupperware, Hair, Herbal & Home Bridal — JHB / Soweto / Bez Valley</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream-white: #faf6f0;
+      --warm-beige: #efe6d8;
+      --sand-beige: #e4d6c3;
+      --light-brown: #a47148;
+      --caramel-brown: #8b5a2b;
+      --espresso-ink: #2b1d14;
+      --muted-brown: #6b5344;
+    }
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--cream-white);
+      color: var(--espresso-ink);
+      padding-bottom: 84px;
+    }
+    @media (min-width: 768px) {
+      body { padding-bottom: 0; }
+    }
+    .font-luxury {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .brown-gradient-text {
+      background: linear-gradient(135deg, #6f4524 0%, #a47148 55%, #c59b6d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .luxe-btn {
+      background: linear-gradient(135deg, #a47148 0%, #8b5a2b 100%);
+      color: #fffdf9;
+    }
+    .luxe-btn:hover {
+      background: linear-gradient(135deg, #8b5a2b 0%, #6f4524 100%);
+    }
+    .glass-luxe {
+      background: #efe6d8;
+      border: 1px solid #d7c3a8;
+      box-shadow: 0 14px 32px -12px rgba(107, 83, 68, 0.16);
+    }
+    .cream-card {
+      background: #fffdf9;
+      border: 1px solid #dfd0bc;
+    }
+    .store-page { display: none; }
+    .store-page.active { display: block; animation: pageFade 0.22s ease-out; }
+    @keyframes pageFade {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .scale-bar-fill { transition: width 0.25s ease, height 0.25s ease; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #efe6d8; }
+    ::-webkit-scrollbar-thumb { background: #b58963; border-radius: 999px; }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#d8c3a5] selection:text-[#2b1d14]">
+
+  <!-- Top Banner -->
+  <div class="bg-[#e4d6c3] border-b border-[#cfb99d] text-[#3d291c] text-[11px] sm:text-xs py-2 px-3 text-center font-medium tracking-wide">
+    ✨ <strong>MANKONJENI ATELIER</strong> • Home Delivery Across <strong>Johannesburg, Soweto, Bez Valley</strong> & Surrounds • Contact: <strong>+27 64 017 7796 (Thoe)</strong>
+  </div>
+
+  <!-- Sticky Navigation -->
+  <nav class="sticky top-0 z-50 bg-[#faf6f0]/95 backdrop-blur-xl border-b border-[#d7c3a8]">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-3 flex items-center justify-between gap-2">
+      <button onclick="redirectToPage('home')" class="flex items-center gap-2.5 shrink-0 text-left">
+        <div class="w-10 h-10 rounded-full bg-[#a47148] p-[2px] shadow-sm">
+          <div class="w-full h-full bg-[#fffdf9] rounded-full flex items-center justify-center font-luxury font-bold text-xl text-[#8b5a2b]">
+            M
+          </div>
+        </div>
+        <div>
+          <span class="font-luxury text-lg sm:text-2xl font-bold tracking-[0.12em] brown-gradient-text block leading-none">MANKONJENI</span>
+          <span class="text-[9px] uppercase tracking-[0.22em] text-[#6b5344] font-semibold">JHB • Soweto • Bez Valley</span>
+        </div>
+      </button>
+
+      <!-- Desktop Page Redirect Links -->
+      <div class="hidden xl:flex items-center gap-4 text-[11px] uppercase tracking-wider font-bold text-[#4a3525]">
+        <a href="?page=home" onclick="onPageLink(event, 'home')" data-nav-page="home" class="nav-page-link hover:text-[#8b5a2b] transition">Home</a>
+        <a href="?page=makeup-kit" onclick="onPageLink(event, 'makeup-kit')" data-nav-page="makeup-kit" class="nav-page-link hover:text-[#8b5a2b] transition">Makeup Kit</a>
+        <a href="?page=tupperware" onclick="onPageLink(event, 'tupperware')" data-nav-page="tupperware" class="nav-page-link hover:text-[#8b5a2b] transition">Tupperware</a>
+        <a href="?page=hair-styling" onclick="onPageLink(event, 'hair-styling')" data-nav-page="hair-styling" class="nav-page-link hover:text-[#8b5a2b] transition">Hair & Styling</a>
+        <a href="?page=herbal-medication" onclick="onPageLink(event, 'herbal-medication')" data-nav-page="herbal-medication" class="nav-page-link hover:text-[#8b5a2b] transition">Herbal Medication</a>
+        <a href="?page=bridal-events" onclick="onPageLink(event, 'bridal-events')" data-nav-page="bridal-events" class="nav-page-link hover:text-[#8b5a2b] transition">Bridal & Events</a>
+        <a href="?page=cart" onclick="onPageLink(event, 'cart')" data-nav-page="cart" class="nav-page-link hover:text-[#8b5a2b] transition">Cart</a>
+      </div>
+
+      <!-- Call / WhatsApp (Thoe) & Cart Button -->
+      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <a href="tel:+27640177796" title="Call Thoe (+27 64 017 7796)" class="bg-[#fffdf9] hover:bg-[#e4d6c3] border border-[#cfb99d] text-[#3d291c] text-xs font-bold px-2.5 sm:px-3 py-2 rounded-full flex items-center gap-1 transition">
+          <span>📞</span>
+          <span class="hidden sm:inline">+27 64 017 7796 (Thoe)</span>
+        </a>
+        <a href="https://wa.me/27640177796?text=Hello%20Thoe%20at%20Mankonjeni%20Atelier!%20I%20would%20like%20to%20order%20or%20book%20home%20delivery." target="_blank" rel="noopener" class="bg-[#8b5a2b] hover:bg-[#6f4524] text-[#fffdf9] text-xs font-extrabold px-3 py-2 rounded-full shadow flex items-center gap-1 transition">
+          <span>💬</span>
+          <span class="hidden md:inline">WhatsApp Thoe</span>
+        </a>
+        <button onclick="redirectToPage('cart')" class="luxe-btn text-xs font-extrabold px-3 py-2 rounded-full shadow flex items-center gap-1">
+          <span>🛍️</span>
+          <span class="cart-count-badge">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Portrait Horizontal Page Redirect Bar -->
+    <div class="xl:hidden border-t border-[#d7c3a8] bg-[#efe6d8] px-2 py-1.5 flex items-center gap-1.5 overflow-x-auto text-[11px] font-bold">
+      <a href="?page=home" onclick="onPageLink(event, 'home')" data-nav-page="home" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Home</a>
+      <a href="?page=makeup-kit" onclick="onPageLink(event, 'makeup-kit')" data-nav-page="makeup-kit" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Makeup Kit</a>
+      <a href="?page=tupperware" onclick="onPageLink(event, 'tupperware')" data-nav-page="tupperware" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Tupperware</a>
+      <a href="?page=hair-styling" onclick="onPageLink(event, 'hair-styling')" data-nav-page="hair-styling" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Hair & Styling</a>
+      <a href="?page=herbal-medication" onclick="onPageLink(event, 'herbal-medication')" data-nav-page="herbal-medication" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Herbal Medication</a>
+      <a href="?page=bridal-events" onclick="onPageLink(event, 'bridal-events')" data-nav-page="bridal-events" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#fffdf9] text-[#3d291c] whitespace-nowrap">Bridal & Events</a>
+      <a href="?page=cart" onclick="onPageLink(event, 'cart')" data-nav-page="cart" class="nav-page-link px-2.5 py-1 rounded-lg bg-[#a47148] text-[#fffdf9] whitespace-nowrap ml-auto">Cart (<span class="cart-count-badge">0</span>)</a>
+    </div>
+  </nav>
+
+  <!-- ==================== PAGE 1: HOME (?page=home) ==================== -->
+  <section id="page-home" class="store-page active max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12">
+    <div class="glass-luxe rounded-3xl p-5 sm:p-10 mb-8 grid lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+        <span class="inline-block bg-[#fffdf9] border border-[#cfb99d] text-[#6f4524] text-[11px] font-bold px-3.5 py-1 rounded-full">
+          MANKONJENI ONLINE STORE • CURRENCY: SOUTH AFRICAN RANDS (ZAR)
+        </span>
+        <h1 class="font-luxury text-4xl sm:text-6xl font-bold leading-tight text-[#2b1d14]">
+          Curated by <span class="brown-gradient-text italic">Mankonjeni</span>, Delivered to Your Door.
+        </h1>
+        <p class="text-sm sm:text-base text-[#5c4636] leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          Home delivery across <strong>Johannesburg, Soweto, Bez Valley</strong>, and surrounding areas. Every department has its own separate interactive page with product explanations, live measurement scales, ZAR pricing, and cart checkout via <strong>+27 64 017 7796 (Thoe)</strong>.
+        </p>
+
+        <div class="flex flex-wrap gap-2.5 justify-center lg:justify-start pt-1">
+          <a href="tel:+27640177796" class="bg-[#fffdf9] hover:bg-[#e4d6c3] border border-[#cfb99d] text-[#2b1d14] font-bold px-4 py-2.5 rounded-full text-xs sm:text-sm transition">
+            📞 Call Thoe: +27 64 017 7796
+          </a>
+          <a href="https://wa.me/27640177796?text=Hello%20Thoe!%20I%20am%20visiting%20Mankonjeni%20Atelier%20for%20delivery%20in%20Johannesburg%20%2F%20Soweto%20%2F%20Bez%20Valley." target="_blank" rel="noopener" class="luxe-btn font-extrabold px-5 py-2.5 rounded-full text-xs sm:text-sm shadow transition">
+            💬 WhatsApp Thoe
+          </a>
+          <button onclick="redirectToPage('cart')" class="bg-[#fffdf9] hover:bg-[#e4d6c3] border border-[#8b5a2b] text-[#6f4524] font-extrabold px-4 py-2.5 rounded-full text-xs sm:text-sm transition">
+            🛍️ Open Cart (<span class="cart-count-badge">0</span>)
+          </button>
+        </div>
+      </div>
+
+      <!-- Delivery Zones & Dedicated Pages Quick Card -->
+      <div class="lg:col-span-5 cream-card rounded-2xl p-5 space-y-3">
+        <p class="text-xs uppercase tracking-widest text-[#8b5a2b] font-extrabold">Home Delivery Zones</p>
+        <p class="text-xs text-[#5c4636] leading-relaxed">
+          <strong>Johannesburg</strong> (CBD, Sandton, Rosebank, Yeoville, Kensington), <strong>Soweto</strong> (Orlando, Dobsonville, Maponya/Kliptown, Meadowlands), <strong>Bez Valley</strong> (Bezuidenhout Valley, Bruma, Observatory) & surrounding suburbs.
+        </p>
+        <div class="grid grid-cols-1 gap-2 pt-1 text-xs font-bold">
+          <button onclick="redirectToPage('makeup-kit')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>1. Makeup Kit Page</span>
+            <span class="text-[#8b5a2b]">Redirect →</span>
+          </button>
+          <button onclick="redirectToPage('tupperware')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>2. Tupperware Products Page</span>
+            <span class="text-[#8b5a2b]">Redirect →</span>
+          </button>
+          <button onclick="redirectToPage('hair-styling')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>3. Hair Dressing & Styling Page</span>
+            <span class="text-[#8b5a2b]">Redirect →</span>
+          </button>
+          <button onclick="redirectToPage('herbal-medication')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>4. Herbal Medication Page</span>
+            <span class="text-[#8b5a2b]">Redirect →</span>
+          </button>
+          <button onclick="redirectToPage('bridal-events')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
+            <span>5. Bridal & Events Makeup at Home Page</span>
+            <span class="text-[#8b5a2b]">Redirect →</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Separate Page Cards -->
+    <div id="home-pages-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <!-- ==================== DEDICATED PRODUCT / SERVICE PAGES ==================== -->
+  <section id="page-makeup-kit" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-tupperware" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-hair-styling" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-herbal-medication" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+  <section id="page-bridal-events" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12"></section>
+
+  <!-- ==================== PAGE 7: CART (?page=cart) ==================== -->
+  <section id="page-cart" class="store-page max-w-7xl mx-auto px-3 sm:px-4 py-8 sm:py-12">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+      <div>
+        <a href="?page=home" onclick="onPageLink(event, 'home')" class="text-xs text-[#8b5a2b] hover:underline font-bold mb-1 inline-block">← Back to Home</a>
+        <span class="block text-xs uppercase tracking-widest text-[#8b5a2b] font-bold">Dedicated Cart Page</span>
+        <h2 class="font-luxury text-3xl sm:text-5xl font-bold text-[#2b1d14]">Mankonjeni Shopping Cart</h2>
+      </div>
+      <button onclick="clearCartItems()" class="bg-[#fffdf9] hover:bg-[#e4d6c3] border border-[#cfb99d] text-[#9e3b24] text-xs font-bold px-4 py-2.5 rounded-xl">
+        Clear Cart
+      </button>
+    </div>
+
+    <div class="glass-luxe rounded-3xl p-5 sm:p-8 grid lg:grid-cols-12 gap-8">
+      <!-- Cart Contents -->
+      <div class="lg:col-span-7 space-y-4">
+        <h3 class="font-luxury text-2xl font-bold text-[#2b1d14] border-b border-[#d7c3a8] pb-3">
+          Added Items & Bookings (<span class="cart-count-badge">0</span>)
+        </h3>
+        <div id="cart-contents-list" class="space-y-3 min-h-[140px]"></div>
+      </div>
+
+      <!-- Checkout & Delivery Area -->
+      <div class="lg:col-span-5 cream-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between space-y-5">
+        <div class="space-y-3.5">
+          <h3 class="font-luxury text-2xl font-bold text-[#2b1d14] border-b border-[#e4d6c3] pb-2">Delivery & Order Summary</h3>
+
+          <div>
+            <label class="block text-xs font-bold text-[#4a3525] mb-1">Your Name</label>
+            <input id="order-customer-name" type="text" placeholder="Enter your full name" class="w-full bg-[#faf6f0] border border-[#cfb99d] rounded-xl px-3.5 py-2.5 text-sm text-[#2b1d14] focus:outline-none">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#4a3525] mb-1">Home Delivery Area (JHB / Soweto / Bez Valley & Surrounds)</label>
+            <select id="order-delivery-area" class="w-full bg-[#faf6f0] border border-[#cfb99d] rounded-xl px-3.5 py-2.5 text-sm text-[#2b1d14] font-semibold focus:outline-none">
+              <option value="Johannesburg (CBD / Inner City)">Johannesburg — CBD / Inner City</option>
+              <option value="Johannesburg (Sandton / Rosebank / Melrose)">Johannesburg — Sandton / Rosebank / Melrose</option>
+              <option value="Johannesburg (Yeoville / Berea / Hillbrow)">Johannesburg — Yeoville / Berea / Hillbrow</option>
+              <option value="Soweto (Orlando / Maponya / Pimville)">Soweto — Orlando / Maponya / Pimville</option>
+              <option value="Soweto (Dobsonville / Meadowlands / Protea)">Soweto — Dobsonville / Meadowlands / Protea</option>
+              <option value="Bez Valley (Bezuidenhout Valley / Bruma / Observatory)">Bez Valley — Bezuidenhout Valley / Bruma / Observatory</option>
+              <option value="Surrounding Areas (Kensington / Malvern / Bedfordview / Roodepoort)">Surrounding Areas — Kensington / Malvern / Bedfordview / Roodepoort</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#4a3525] mb-1">Street Address / Event Date & Notes</label>
+            <input id="order-address-notes" type="text" placeholder="Street, complex/house no., or bridal/event date..." class="w-full bg-[#faf6f0] border border-[#cfb99d] rounded-xl px-3.5 py-2.5 text-sm text-[#2b1d14] focus:outline-none">
+          </div>
+
+          <div class="border-t border-[#e4d6c3] pt-3 space-y-1.5 text-sm">
+            <div class="flex justify-between text-[#5c4636]">
+              <span>Total Quantity:</span>
+              <strong id="cart-total-qty" class="text-[#2b1d14]">0</strong>
+            </div>
+            <div class="flex justify-between items-baseline pt-2">
+              <span class="text-xs uppercase tracking-wider text-[#6b5344] font-extrabold">Total (ZAR):</span>
+              <span id="cart-total-zar" class="font-luxury text-4xl font-bold brown-gradient-text">R0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-2.5">
+          <button onclick="sendCartToThoeWhatsApp()" class="w-full py-3.5 px-5 rounded-2xl luxe-btn font-extrabold text-sm flex items-center justify-center gap-2 shadow transition transform active:scale-95">
+            <span>💬 WhatsApp Order to Thoe (+27 64 017 7796)</span>
+          </button>
+          <a href="tel:+27640177796" class="w-full py-3 px-5 rounded-2xl bg-[#efe6d8] hover:bg-[#e4d6c3] border border-[#cfb99d] text-[#2b1d14] font-extrabold text-sm flex items-center justify-center gap-2 transition">
+            <span>📞 Call Thoe: +27 64 017 7796</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#d7c3a8] bg-[#efe6d8] py-8 px-4 text-center sm:text-left">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <span class="font-luxury text-2xl font-bold brown-gradient-text tracking-widest">MANKONJENI ATELIER</span>
+        <p class="text-xs text-[#6b5344] mt-1">Home Delivery across Johannesburg, Soweto, Bez Valley & Surrounds • Contact: +27 64 017 7796 (Thoe)</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-2.5">
+        <a href="tel:+27640177796" class="px-4 py-2 rounded-full bg-[#fffdf9] hover:bg-[#e4d6c3] border border-[#cfb99d] text-xs font-bold text-[#2b1d14] transition">📞 +27 64 017 7796 (Thoe)</a>
+        <a href="https://wa.me/27640177796" target="_blank" rel="noopener" class="px-4 py-2 rounded-full luxe-btn text-xs font-extrabold transition">💬 WhatsApp Thoe</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Portrait Bottom Action Bar -->
+  <div class="fixed bottom-0 inset-x-0 z-50 md:hidden bg-[#faf6f0]/95 backdrop-blur-lg border-t border-[#d7c3a8] px-3 py-2 grid grid-cols-3 gap-2">
+    <a href="tel:+27640177796" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1">
+      <span>📞</span> Call Thoe
+    </a>
+    <a href="https://wa.me/27640177796?text=Hello%20Thoe!%20I%20want%20to%20order%20from%20Mankonjeni%20Atelier." target="_blank" rel="noopener" class="bg-[#8b5a2b] text-[#fffdf9] font-extrabold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1">
+      <span>💬</span> WhatsApp
+    </a>
+    <button onclick="redirectToPage('cart')" class="luxe-btn font-extrabold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1">
+      <span>🛍️</span> Cart (<span class="cart-count-badge">0</span>)
+    </button>
+  </div>
+
+  <script>
+    const PHONE_THOE = '27640177796';
+    const CART_STORAGE_KEY = 'mankonjeni_atelier_cart_zar_v1';
+
+    const DEPARTMENT_PAGES = {
+      'makeup-kit': {
+        pageId: 'page-makeup-kit',
+        title: 'Makeup Kit Page',
+        badge: 'MANKONJENI MAKEUP KITS',
+        overview: 'Complete beauty kits curated for everyday radiance, soft glam, and full evening contour—delivered straight to your doorstep in Johannesburg, Soweto, Bez Valley, and surrounding suburbs.',
+        scaleTitle: 'Coverage & Wear-Time Measurement Scale',
+        scaleUnit: 'hrs Wear',
+        minVal: 6,
+        maxVal: 24,
+        stepVal: 2,
+        defaultVal: 14,
+        scaleCaption: (v) => v <= 10 ? 'Light-to-Medium Everyday Breathable Wear' : (v <= 16 ? 'Buildable Medium-to-Full Glam Wear' : 'Long-Wear Transfer-Resistant Event Lock'),
+        optionsLabel: 'Finish / Shade Tone',
+        options: ['Warm Honey / Golden', 'Rich Caramel / Mocha', 'Soft Neutral / Champagne', 'Rose Berry / Velvet'],
+        pricePerStep: 35,
+        products: [
+          {
+            name: 'Mankonjeni Signature 12-Piece Glam Kit',
+            explanation: 'Includes velvet matte foundation, concealer duo, setting powder, blush palette, brow pomade, and lash set for a complete full-face routine.',
+            basePrice: 680
+          },
+          {
+            name: 'Everyday Glow & Brow Starter Kit',
+            explanation: 'Lightweight skin tint, cream bronzer, lip gloss, and precision brow pencil designed for quick morning routines without heavy buildup.',
+            basePrice: 420
+          },
+          {
+            name: 'Pro Brush & Blending Vault (14 Brushes)',
+            explanation: 'Soft synthetic bristles for seamless foundation buffing, precision cut-crease shading, and seamless powder baking.',
+            basePrice: 350
+          }
+        ]
+      },
+      'tupperware': {
+        pageId: 'page-tupperware',
+        title: 'Tupperware Products Page',
+        badge: 'MANKONJENI TUPPERWARE COLLECTION',
+        overview: 'Durable, space-saving food storage, fridge & pantry containers, and meal-prep jugs with tight seals—delivered across Johannesburg, Soweto, Bez Valley & surrounding areas.',
+        scaleTitle: 'Container Capacity Measurement Scale (Litres)',
+        scaleUnit: 'L Capacity',
+        minVal: 0.5,
+        maxVal: 10,
+        stepVal: 0.5,
+        defaultVal: 3.5,
+        scaleCaption: (v) => v <= 2 ? 'Snacks, Spices, Sauces & Fridge Leftovers' : (v <= 5.5 ? 'Family Meal Prep, Rice, Sugar & Salads' : 'Bulk Pantry Staples, Flour, Maize & Beverages'),
+        optionsLabel: 'Set Style / Lid Accent',
+        options: ['Warm Beige & Cream', 'Caramel Brown & Sand', 'Clear Crystal Seal', 'Family Multi-Pack'],
+        pricePerStep: 42,
+        products: [
+          {
+            name: 'Airtight Pantry & Dry Goods Canister Set',
+            explanation: 'Keeps rice, flour, sugar, coffee, and oats crisp and dry with snap-tight moisture-lock seals that stack neatly in cupboards.',
+            basePrice: 540
+          },
+          {
+            name: 'FridgeSmart & Meal-Prep Storage Duo',
+            explanation: 'Designed to organize fresh produce, cooked meals, and leftovers cleanly while preventing spills and odor transfer.',
+            basePrice: 390
+          },
+          {
+            name: 'Large Serving Bowl & Pouring Pitcher Set',
+            explanation: 'Ideal for family gatherings, salads, cold drinks, and kitchen prep with easy-grip sides and secure covers.',
+            basePrice: 460
+          }
+        ]
+      },
+      'hair-styling': {
+        pageId: 'page-hair-styling',
+        title: 'Hair Dressing & Styling Page',
+        badge: 'HAIR DRESSING & STYLING ESSENTIALS',
+        overview: 'Nourishing hair oils, silk edge controls, heat-protectant serums, and styling tools for wigs, braids, and natural hair—delivered to your home in JHB, Soweto, Bez Valley & nearby areas.',
+        scaleTitle: 'Styling Length & Hold Measurement Scale (Inches)',
+        scaleUnit: '" Length / Hold',
+        minVal: 8,
+        maxVal: 36,
+        stepVal: 2,
+        defaultVal: 20,
+        scaleCaption: (v) => v <= 14 ? 'Short Bob / Cropped Style & Sleek Edge Control' : (v <= 24 ? 'Mid-Length Bounce, Silk Press & Soft Hold' : 'Extra-Long Flowing Lengths & High-Slip Shine Control'),
+        optionsLabel: 'Formula / Finish',
+        options: ['Silk Gloss Oil', '24hr Firm Edge Hold', 'Moisture Curl Cream', 'Heat Shield Mist'],
+        pricePerStep: 25,
+        products: [
+          {
+            name: 'Luxe Argan & Silk Shine Hair Elixir',
+            explanation: 'Smooths frizz, adds mirror-like shine to natural hair and extensions, and softens coarse ends without weighing hair down.',
+            basePrice: 195
+          },
+          {
+            name: 'Non-Flaking Edge & Sleek Styling Gel',
+            explanation: 'Lays baby hairs and sleek ponytails cleanly with humidity resistance and zero white residue.',
+            basePrice: 145
+          },
+          {
+            name: 'Thermal Protectant & Curl Defining Mist',
+            explanation: 'Shields strands from blow-dryer and flat-iron heat while reviving soft waves and bouncy curls.',
+            basePrice: 210
+          }
+        ]
+      },
+      'herbal-medication': {
+        pageId: 'page-herbal-medication',
+        title: 'Herbal Medication Page',
+        badge: 'TRADITIONAL & BOTANICAL HERBAL WELLNESS',
+        overview: 'Plant-based herbal infusions, tonics, and daily wellness blends prepared by Mankonjeni with clear usage guides—home delivered across Johannesburg, Soweto, Bez Valley & surrounds.',
+        scaleTitle: 'Bottle / Infusion Volume Measurement Scale (ml)',
+        scaleUnit: 'ml Volume',
+        minVal: 100,
+        maxVal: 1000,
+        stepVal: 50,
+        defaultVal: 500,
+        scaleCaption: (v) => v <= 250 ? 'Travel / Trial Bottle (~1–2 Weeks of Daily Use)' : (v <= 600 ? 'Standard Monthly Household Wellness Bottle' : 'Family / Extended Bulk Supply Bottle'),
+        optionsLabel: 'Preparation Type',
+        options: ['Liquid Herbal Tonic', 'Loose Herbal Tea Blend', 'Warming Root Infusion', 'Daily Wellness Pack'],
+        pricePerStep: 18,
+        products: [
+          {
+            name: 'Mankonjeni Daily Immune & Vitality Tonic',
+            explanation: 'Botanical herbal extract formulated to support everyday energy, resilience, and general bodily balance.',
+            basePrice: 240
+          },
+          {
+            name: 'Soothing Digestive & Stomach Comfort Blend',
+            explanation: 'Gentle herbal infusion crafted to ease post-meal heaviness and support calm digestion.',
+            basePrice: 185
+          },
+          {
+            name: 'Evening Rest & Joint Relief Herbal Infusion',
+            explanation: 'Calming traditional plant blend suited for winding down after long days and supporting relaxed recovery.',
+            basePrice: 220
+          }
+        ]
+      },
+      'bridal-events': {
+        pageId: 'page-bridal-events',
+        title: 'Bridal & Events Makeup at Home Page',
+        badge: 'AT-HOME BRIDAL & EVENT MAKEUP SERVICE',
+        overview: 'On-location bridal, lobola/traditional wedding, matric dance, birthday, and party makeup done right in the comfort of your home across Johannesburg, Soweto, Bez Valley & surrounding areas.',
+        scaleTitle: 'Faces / Prep-Time Measurement Scale (People)',
+        scaleUnit: ' People (Home Call-Out)',
+        minVal: 1,
+        maxVal: 10,
+        stepVal: 1,
+        defaultVal: 1,
+        scaleCaption: (v) => v === 1 ? 'Solo At-Home Glam (~1.5 hrs prep for 1 person)' : (v <= 4 ? 'Bridal / Small Group Home Session (~2.5–3.5 hrs)' : 'Full Bridal Party / Event Squad Session (Multi-artist / Timed Schedule)'),
+        optionsLabel: 'Look Style',
+        options: ['Soft Radiant Bridal', 'Full Glam & Lashes', 'Traditional / Lobola Glow', 'Editorial / Event Glam'],
+        pricePerStep: 450,
+        products: [
+          {
+            name: 'At-Home Bridal & Traditional Wedding Glam',
+            explanation: 'Includes skin prep, custom complexion matching, long-wear photo-ready makeup, false lashes, and touch-up notes at your home.',
+            basePrice: 1450
+          },
+          {
+            name: 'Event, Matric Dance, Birthday & Party Makeup',
+            explanation: 'Tailored glam applied at your home in Johannesburg, Soweto, Bez Valley, or nearby areas so you get ready stress-free.',
+            basePrice: 650
+          },
+          {
+            name: 'Bridal Squad / Family Home Booking Package',
+            explanation: 'Coordinated at-home makeup session for bridesmaids, mothers, and guests with seamless timing before your ceremony or event.',
+            basePrice: 1850
+          }
+        ]
+      }
+    };
+
+    const pageInteractiveState = {};
+    Object.entries(DEPARTMENT_PAGES).forEach(([key, cfg]) => {
+      pageInteractiveState[key] = {
+        scaleVal: cfg.defaultVal,
+        optionIdx: 0
+      };
+    });
+
+    let cart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '[]');
+
+    function computeItemPrice(basePrice, pageKey, scaleVal) {
+      const cfg = DEPARTMENT_PAGES[pageKey];
+      const steps = (scaleVal - cfg.defaultVal) / cfg.stepVal;
+      return Math.max(50, Math.round(basePrice + steps * cfg.pricePerStep));
+    }
+
+    function renderAllPages() {
+      // Home cards for the 5 separate pages
+      const homeGrid = document.getElementById('home-pages-grid');
+      homeGrid.innerHTML = Object.entries(DEPARTMENT_PAGES).map(([key, cfg]) => `
+        <div class="glass-luxe rounded-3xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] uppercase tracking-wider bg-[#fffdf9] border border-[#cfb99d] text-[#6f4524] px-3 py-1 rounded-full font-bold">
+              ${cfg.badge}
+            </span>
+            <h2 class="font-luxury text-2xl sm:text-3xl font-bold text-[#2b1d14] mt-3">${cfg.title}</h2>
+            <p class="text-xs sm:text-sm text-[#5c4636] mt-2 leading-relaxed">${cfg.overview}</p>
+            <p class="text-[11px] text-[#6f4524] mt-3 bg-[#fffdf9] p-3 rounded-xl border border-[#dfd0bc] font-semibold">
+              Includes: Product explanations, ${cfg.scaleTitle}, ZAR prices & Cart redirect.
+            </p>
+          </div>
+          <button onclick="redirectToPage('${key}')" class="mt-5 w-full py-3 rounded-xl luxe-btn font-extrabold text-xs uppercase tracking-wider shadow transition">
+            Open ${cfg.title} →
+          </button>
+        </div>
+      `).join('');
+
+      // Render each of the 5 separate pages
+      Object.entries(DEPARTMENT_PAGES).forEach(([key, cfg]) => {
+        const sec = document.getElementById(cfg.pageId);
+        const st = pageInteractiveState[key];
+        const pct = Math.min(100, Math.max(5, Math.round(((st.scaleVal - cfg.minVal) / (cfg.maxVal - cfg.minVal)) * 100)));
+
+        sec.innerHTML = `
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+            <div>
+              <a href="?page=home" onclick="onPageLink(event, 'home')" class="text-xs text-[#8b5a2b] hover:underline font-bold mb-1 inline-block">← Back to Home</a>
+              <span class="block text-xs uppercase tracking-widest text-[#8b5a2b] font-bold">${cfg.badge}</span>
+              <h2 class="font-luxury text-3xl sm:text-5xl font-bold text-[#2b1d14]">${cfg.title}</h2>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="tel:+27640177796" class="bg-[#fffdf9] hover:bg-[#e4d6c3] border border-[#cfb99d] text-[#2b1d14] text-xs font-bold px-3.5 py-2.5 rounded-xl">📞 Call Thoe</a>
+              <button onclick="redirectToPage('cart')" class="luxe-btn text-xs font-extrabold px-4 py-2.5 rounded-xl shadow">
+                🛍️ Cart (<span class="cart-count-badge">${getCartQty()}</span>)
+              </button>
+            </div>
+          </div>
+
+          <!-- Dedicated Explanation Banner -->
+          <div class="glass-luxe rounded-3xl p-5 sm:p-6 mb-6">
+            <p class="text-sm sm:text-base text-[#3d291c] leading-relaxed">${cfg.overview}</p>
+            <p class="text-xs text-[#6f4524] font-semibold mt-2">
+              🚚 Home delivery available across Johannesburg, Soweto, Bez Valley & surrounding areas • Contact Thoe on +27 64 017 7796.
+            </p>
+          </div>
+
+          <!-- Interactive Measurement Scale & Option Selector -->
+          <div class="glass-luxe rounded-3xl p-5 sm:p-7 mb-8 grid lg:grid-cols-12 gap-6 items-center">
+            <div class="lg:col-span-5 cream-card rounded-2xl p-5 space-y-3">
+              <div class="flex items-baseline justify-between">
+                <span class="text-[11px] uppercase tracking-wider text-[#6b5344] font-bold">Scale Readout</span>
+                <span id="scale-readout-${key}" class="font-luxury text-3xl font-bold brown-gradient-text">${st.scaleVal}${cfg.scaleUnit}</span>
+              </div>
+
+              <!-- Visual Measurement Bar / Ruler -->
+              <div class="w-full h-4 bg-[#efe6d8] rounded-full overflow-hidden border border-[#d7c3a8]">
+                <div id="scale-bar-${key}" class="scale-bar-fill h-full bg-[#8b5a2b]" style="width:${pct}%"></div>
+              </div>
+              <div class="flex justify-between text-[10px] font-bold text-[#6b5344]">
+                <span>${cfg.minVal}${cfg.scaleUnit.split(' ')[0]}</span>
+                <span>${((cfg.minVal + cfg.maxVal) / 2)}${cfg.scaleUnit.split(' ')[0]}</span>
+                <span>${cfg.maxVal}${cfg.scaleUnit.split(' ')[0]}</span>
+              </div>
+
+              <p id="scale-desc-${key}" class="text-xs text-[#3d291c] bg-[#faf6f0] p-3 rounded-xl border border-[#e4d6c3] font-medium">
+                ${cfg.scaleCaption(st.scaleVal)}
+              </p>
+
+              <p class="text-xs text-[#6b5344]">
+                Selected ${cfg.optionsLabel}: <strong id="opt-readout-${key}" class="text-[#2b1d14]">${cfg.options[st.optionIdx]}</strong>
+              </p>
+            </div>
+
+            <div class="lg:col-span-7 space-y-5">
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <label class="text-xs font-extrabold uppercase tracking-wider text-[#6f4524]">${cfg.scaleTitle}</label>
+                  <span id="scale-pill-${key}" class="text-xs font-bold bg-[#fffdf9] border border-[#cfb99d] text-[#2b1d14] px-3 py-1 rounded-full">${st.scaleVal}${cfg.scaleUnit}</span>
+                </div>
+                <input
+                  type="range"
+                  min="${cfg.minVal}"
+                  max="${cfg.maxVal}"
+                  step="${cfg.stepVal}"
+                  value="${st.scaleVal}"
+                  oninput="updateDeptScale('${key}', this.value)"
+                  class="w-full accent-[#8b5a2b] cursor-pointer"
+                >
+              </div>
+
+              <div>
+                <span class="block text-xs font-extrabold uppercase tracking-wider text-[#6f4524] mb-2">${cfg.optionsLabel}</span>
+                <div class="flex flex-wrap gap-2">
+                  ${cfg.options.map((opt, idx) => `
+                    <button
+                      id="opt-btn-${key}-${idx}"
+                      onclick="updateDeptOption('${key}', ${idx})"
+                      class="px-3.5 py-2 rounded-xl text-xs font-bold border transition ${
+                        idx === st.optionIdx
+                          ? 'bg-[#8b5a2b] text-[#fffdf9] border-[#6f4524]'
+                          : 'bg-[#fffdf9] text-[#2b1d14] border-[#d7c3a8] hover:bg-[#e4d6c3]'
+                      }"
+                    >
+                      ${opt}
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specific Products & Explanations Grid -->
+          <h3 class="font-luxury text-2xl sm:text-3xl font-bold text-[#2b1d14] mb-4">${cfg.title} — Offerings & ZAR Prices</h3>
+          <div id="dept-items-${key}" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        `;
+
+        renderDeptProducts(key);
+      });
+    }
+
+    function updateDeptScale(key, rawVal) {
+      const cfg = DEPARTMENT_PAGES[key];
+      const val = parseFloat(rawVal);
+      pageInteractiveState[key].scaleVal = val;
+
+      const pct = Math.min(100, Math.max(5, Math.round(((val - cfg.minVal) / (cfg.maxVal - cfg.minVal)) * 100)));
+      document.getElementById(`scale-readout-${key}`).textContent = `${val}${cfg.scaleUnit}`;
+      document.getElementById(`scale-pill-${key}`).textContent = `${val}${cfg.scaleUnit}`;
+      document.getElementById(`scale-bar-${key}`).style.width = `${pct}%`;
+      document.getElementById(`scale-desc-${key}`).textContent = cfg.scaleCaption(val);
+
+      renderDeptProducts(key);
+    }
+
+    function updateDeptOption(key, idx) {
+      const cfg = DEPARTMENT_PAGES[key];
+      pageInteractiveState[key].optionIdx = idx;
+      document.getElementById(`opt-readout-${key}`).textContent = cfg.options[idx];
+
+      cfg.options.forEach((_, i) => {
+        const btn = document.getElementById(`opt-btn-${key}-${i}`);
+        if (btn) {
+          btn.className = `px-3.5 py-2 rounded-xl text-xs font-bold border transition ${
+            i === idx
+              ? 'bg-[#8b5a2b] text-[#fffdf9] border-[#6f4524]'
+              : 'bg-[#fffdf9] text-[#2b1d14] border-[#d7c3a8] hover:bg-[#e4d6c3]'
+          }`;
+        }
+      });
+
+      renderDeptProducts(key);
+    }
+
+    function renderDeptProducts(key) {
+      const cfg = DEPARTMENT_PAGES[key];
+      const st = pageInteractiveState[key];
+      const selectedOpt = cfg.options[st.optionIdx];
+      const grid = document.getElementById(`dept-items-${key}`);
+      if (!grid) return;
+
+      grid.innerHTML = cfg.products.map(prod => {
+        const price = computeItemPrice(prod.basePrice, key, st.scaleVal);
+        const specSummary = `${st.scaleVal}${cfg.scaleUnit} • ${selectedOpt}`;
+        return `
+          <div class="glass-luxe rounded-3xl p-6 flex flex-col justify-between">
+            <div>
+              <span class="inline-block text-[10px] uppercase tracking-wider bg-[#fffdf9] border border-[#cfb99d] text-[#6f4524] px-2.5 py-1 rounded-full font-bold mb-2">
+                ${specSummary}
+              </span>
+              <h4 class="font-luxury text-2xl font-bold text-[#2b1d14] leading-snug">${prod.name}</h4>
+              <p class="text-xs sm:text-sm text-[#5c4636] mt-2 mb-4 leading-relaxed">${prod.explanation}</p>
+            </div>
+
+            <div>
+              <div class="cream-card rounded-2xl p-3.5 mb-4 flex items-baseline justify-between">
+                <span class="text-xs text-[#6b5344] font-semibold">Price (ZAR):</span>
+                <span class="font-luxury text-3xl font-bold brown-gradient-text">R${price.toLocaleString()}</span>
+              </div>
+              <button
+                onclick="addItemToCartAndRedirect('${cfg.title.replace(' Page', '')}', '${prod.name.replace(/'/g, "\\'")}', '${specSummary.replace(/'/g, "\\'")}', ${price})"
+                class="w-full py-3 rounded-xl luxe-btn font-extrabold text-xs uppercase tracking-wider shadow transition transform active:scale-95"
+              >
+                + Add to Cart
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Cart Functions
+    function getCartQty() {
+      return cart.reduce((sum, item) => sum + item.qty, 0);
+    }
+
+    function saveCartState() {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    function addItemToCartAndRedirect(department, name, specs, price) {
+      const idx = cart.findIndex(c => c.department === department && c.name === name && c.specs === specs);
+      if (idx > -1) {
+        cart[idx].qty += 1;
+      } else {
+        cart.push({ department, name, specs, price, qty: 1 });
+      }
+      saveCartState();
+      redirectToPage('cart');
+    }
+
+    function updateCartItemQty(idx, delta) {
+      if (!cart[idx]) return;
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) cart.splice(idx, 1);
+      saveCartState();
+    }
+
+    function removeCartItem(idx) {
+      cart.splice(idx, 1);
+      saveCartState();
+    }
+
+    function clearCartItems() {
+      cart = [];
+      saveCartState();
+    }
+
+    function updateCartUI() {
+      const totalQty = getCartQty();
+      document.querySelectorAll('.cart-count-badge').forEach(el => {
+        el.textContent = totalQty;
+      });
+
+      const listEl = document.getElementById('cart-contents-list');
+      const qtyEl = document.getElementById('cart-total-qty');
+      const totalEl = document.getElementById('cart-total-zar');
+      if (!listEl) return;
+
+      if (!cart.length) {
+        listEl.innerHTML = `
+          <div class="cream-card border-dashed rounded-2xl p-8 text-center space-y-3">
+            <p class="text-sm font-bold text-[#2b1d14]">Your cart is empty.</p>
+            <p class="text-xs text-[#6b5344]">Redirect to any page below to pick a scale setting, read product details, and add items:</p>
+            <div class="flex flex-wrap justify-center gap-2 pt-2 text-xs font-bold">
+              <button onclick="redirectToPage('makeup-kit')" class="luxe-btn px-3.5 py-2 rounded-xl">Makeup Kit</button>
+              <button onclick="redirectToPage('tupperware')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Tupperware</button>
+              <button onclick="redirectToPage('hair-styling')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Hair & Styling</button>
+              <button onclick="redirectToPage('herbal-medication')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Herbal Medication</button>
+              <button onclick="redirectToPage('bridal-events')" class="bg-[#efe6d8] border border-[#cfb99d] text-[#2b1d14] px-3.5 py-2 rounded-xl">Bridal & Events</button>
+            </div>
+          </div>
+        `;
+        qtyEl.textContent = '0';
+        totalEl.textContent = 'R0';
+        return;
+      }
+
+      let grandTotal = 0;
+      listEl.innerHTML = cart.map((item, idx) => {
+        const lineTotal = item.price * item.qty;
+        grandTotal += lineTotal;
+        return `
+          <div class="cream-card rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <span class="text-[10px] uppercase tracking-wider bg-[#efe6d8] text-[#6f4524] px-2.5 py-0.5 rounded-full font-bold">
+                ${item.department}
+              </span>
+              <h4 class="font-bold text-sm sm:text-base text-[#2b1d14] mt-1">${item.name}</h4>
+              <p class="text-xs text-[#6b5344] mt-0.5">${item.specs} • Unit Price: <strong>R${item.price.toLocaleString()}</strong></p>
+            </div>
+
+            <div class="flex items-center justify-between sm:justify-end gap-3">
+              <div class="flex items-center bg-[#faf6f0] border border-[#cfb99d] rounded-xl">
+                <button onclick="updateCartItemQty(${idx}, -1)" class="px-3 py-1.5 text-xs font-extrabold text-[#2b1d14]">−</button>
+                <span class="px-2.5 text-xs font-extrabold text-[#2b1d14]">${item.qty}</span>
+                <button onclick="updateCartItemQty(${idx}, 1)" class="px-3 py-1.5 text-xs font-extrabold text-[#2b1d14]">+</button>
+              </div>
+              <span class="font-luxury text-2xl font-bold brown-gradient-text min-w-[74px] text-right">R${lineTotal.toLocaleString()}</span>
+              <button onclick="removeCartItem(${idx})" class="text-xs text-[#9e3b24] hover:underline font-bold px-2">✕</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      qtyEl.textContent = totalQty;
+      totalEl.textContent = `R${grandTotal.toLocaleString()}`;
+    }
+
+    function sendCartToThoeWhatsApp() {
+      if (!cart.length) {
+        alert('Your cart is empty. Please add an item or booking first.');
+        return;
+      }
+      const name = document.getElementById('order-customer-name').value.trim() || 'Customer';
+      const area = document.getElementById('order-delivery-area').value;
+      const notes = document.getElementById('order-address-notes').value.trim() || 'Not provided';
+
+      let total = 0;
+      const lines = [
+        `Hello Thoe (Mankonjeni Atelier)! ✨`,
+        `Customer: ${name}`,
+        `Delivery Area: ${area}`,
+        `Address / Event Notes: ${notes}`,
+        ``,
+        `Order Items (ZAR):`
+      ];
+
+      cart.forEach(item => {
+        const lineTotal = item.price * item.qty;
+        total += lineTotal;
+        lines.push(`• [${item.department}] ${item.name} (${item.specs}) × ${item.qty} = R${lineTotal.toLocaleString()}`);
+      });
+
+      lines.push(``);
+      lines.push(`Grand Total: R${total.toLocaleString()}`);
+
+      const url = `https://wa.me/${PHONE_THOE}?text=${encodeURIComponent(lines.join('\n'))}`;
+      window.open(url, '_blank', 'noopener');
+    }
+
+    // Separate Page Redirect Router (?page=...)
+    const VALID_PAGES = ['home', 'makeup-kit', 'tupperware', 'hair-styling', 'herbal-medication', 'bridal-events', 'cart'];
+
+    function getCurrentPageFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const p = params.get('page');
+      if (p && VALID_PAGES.includes(p)) return p;
+      const h = window.location.hash.replace('#', '');
+      if (h && VALID_PAGES.includes(h)) return h;
+      return 'home';
+    }
+
+    function redirectToPage(page) {
+      const target = VALID_PAGES.includes(page) ? page : 'home';
+      const url = new URL(window.location.href);
+      url.searchParams.set('page', target);
+      url.hash = '';
+      try {
+        window.history.pushState({ page: target }, '', url.toString());
+        renderActivePage(target);
+      } catch (_) {
+        window.location.assign(url.toString());
+      }
+    }
+
+    function onPageLink(event, page) {
+      if (event && (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) return;
+      if (event) event.preventDefault();
+      redirectToPage(page);
+    }
+
+    function renderActivePage(target) {
+      document.querySelectorAll('.store-page').forEach(s => s.classList.remove('active'));
+      const activeSection = document.getElementById(`page-${target}`);
+      if (activeSection) activeSection.classList.add('active');
+
+      document.querySelectorAll('.nav-page-link').forEach(link => {
+        const isSel = link.getAttribute('data-nav-page') === target;
+        link.classList.toggle('text-[#8b5a2b]', isSel);
+        link.classList.toggle('underline', isSel);
+      });
+
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+
+    window.addEventListener('popstate', () => {
+      renderActivePage(getCurrentPageFromUrl());
+    });
+
+    // Init
+    renderAllPages();
+    updateCartUI();
+    renderActivePage(getCurrentPageFromUrl());
+  </script>
+</body>
+        </html>
