@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MANKONJENI ATELIER | Makeup, Tupperware, Hair, Herbal & Home Bridal — JHB / Soweto / Bez Valley</title>
+  <title>MANKONJENI ATELIER | Full Catalogs — Makeup, Tupperware, Hair, Herbal & Home Bridal</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -59,7 +59,7 @@
       from { opacity: 0; transform: translateY(5px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .scale-bar-fill { transition: width 0.25s ease, height 0.25s ease; }
+    .scale-bar-fill { transition: width 0.25s ease; }
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #efe6d8; }
     ::-webkit-scrollbar-thumb { background: #b58963; border-radius: 999px; }
@@ -138,7 +138,7 @@
           Curated by <span class="brown-gradient-text italic">Mankonjeni</span>, Delivered to Your Door.
         </h1>
         <p class="text-sm sm:text-base text-[#5c4636] leading-relaxed max-w-2xl mx-auto lg:mx-0">
-          Home delivery across <strong>Johannesburg, Soweto, Bez Valley</strong>, and surrounding areas. Every department has its own separate interactive page with product explanations, live measurement scales, ZAR pricing, and cart checkout via <strong>+27 64 017 7796 (Thoe)</strong>.
+          Home delivery across <strong>Johannesburg, Soweto, Bez Valley</strong>, and surrounding areas. Every department has its own separate interactive page with full product catalogs, explanations, live measurement scales, ZAR pricing, and cart checkout via <strong>+27 64 017 7796 (Thoe)</strong>.
         </p>
 
         <div class="flex flex-wrap gap-2.5 justify-center lg:justify-start pt-1">
@@ -162,23 +162,23 @@
         </p>
         <div class="grid grid-cols-1 gap-2 pt-1 text-xs font-bold">
           <button onclick="redirectToPage('makeup-kit')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>1. Makeup Kit Page</span>
+            <span>1. Makeup Kit Page (Full Catalog)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
           <button onclick="redirectToPage('tupperware')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>2. Tupperware Products Page</span>
+            <span>2. Tupperware Products Page (Spoons to Large Dishes)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
           <button onclick="redirectToPage('hair-styling')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>3. Hair Dressing & Styling Page</span>
+            <span>3. Hair Dressing & Styling Page (Full Catalog)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
           <button onclick="redirectToPage('herbal-medication')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>4. Herbal Medication Page</span>
+            <span>4. Herbal Medication Page (Full Catalog)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
           <button onclick="redirectToPage('bridal-events')" class="flex items-center justify-between bg-[#efe6d8] hover:bg-[#e4d6c3] px-3.5 py-2.5 rounded-xl border border-[#d7c3a8] text-left transition">
-            <span>5. Bridal & Events Makeup at Home Page</span>
+            <span>5. Bridal & Events Makeup at Home Page (All Events)</span>
             <span class="text-[#8b5a2b]">Redirect →</span>
           </button>
         </div>
@@ -299,172 +299,160 @@
 
   <script>
     const PHONE_THOE = '27640177796';
-    const CART_STORAGE_KEY = 'mankonjeni_atelier_cart_zar_v1';
+    const CART_STORAGE_KEY = 'mankonjeni_atelier_cart_zar_v2';
 
     const DEPARTMENT_PAGES = {
       'makeup-kit': {
         pageId: 'page-makeup-kit',
         title: 'Makeup Kit Page',
-        badge: 'MANKONJENI MAKEUP KITS',
-        overview: 'Complete beauty kits curated for everyday radiance, soft glam, and full evening contour—delivered straight to your doorstep in Johannesburg, Soweto, Bez Valley, and surrounding suburbs.',
+        badge: 'COMPLETE MAKEUP & COSMETICS CATALOG',
+        overview: 'Every essential makeup piece for everyday wear, office glam, weddings, parties, photoshoots, and stage/event nights—from primers, foundations, concealers, powders, blushes, bronzers, contours, and highlighters to eyeshadows, eyeliners, mascaras, brow kits, lipsticks, glosses, liners, setting sprays, brushes, and sponges.',
         scaleTitle: 'Coverage & Wear-Time Measurement Scale',
         scaleUnit: 'hrs Wear',
         minVal: 6,
         maxVal: 24,
         stepVal: 2,
         defaultVal: 14,
-        scaleCaption: (v) => v <= 10 ? 'Light-to-Medium Everyday Breathable Wear' : (v <= 16 ? 'Buildable Medium-to-Full Glam Wear' : 'Long-Wear Transfer-Resistant Event Lock'),
-        optionsLabel: 'Finish / Shade Tone',
+        scaleCaption: (v) => v <= 10 ? 'Light-to-Medium Everyday Breathable Wear (6–10 hrs)' : (v <= 16 ? 'Buildable Medium-to-Full Glam Wear (12–16 hrs)' : 'Long-Wear Transfer-Resistant Event Lock (18–24 hrs)'),
+        optionsLabel: 'Shade / Finish Preference',
         options: ['Warm Honey / Golden', 'Rich Caramel / Mocha', 'Soft Neutral / Champagne', 'Rose Berry / Velvet'],
-        pricePerStep: 35,
+        pricePerStep: 15,
         products: [
-          {
-            name: 'Mankonjeni Signature 12-Piece Glam Kit',
-            explanation: 'Includes velvet matte foundation, concealer duo, setting powder, blush palette, brow pomade, and lash set for a complete full-face routine.',
-            basePrice: 680
-          },
-          {
-            name: 'Everyday Glow & Brow Starter Kit',
-            explanation: 'Lightweight skin tint, cream bronzer, lip gloss, and precision brow pencil designed for quick morning routines without heavy buildup.',
-            basePrice: 420
-          },
-          {
-            name: 'Pro Brush & Blending Vault (14 Brushes)',
-            explanation: 'Soft synthetic bristles for seamless foundation buffing, precision cut-crease shading, and seamless powder baking.',
-            basePrice: 350
-          }
+          { name: 'Hydrating & Pore-Blurring Face Primer', explanation: 'Smooths texture and grips foundation so makeup stays fresh and even throughout long hours.', basePrice: 165 },
+          { name: 'Full-Coverage Velvet Matte Liquid Foundation', explanation: 'Buildable medium-to-full coverage foundation with a natural satin-matte finish for photos and events.', basePrice: 260 },
+          { name: 'Skin Tint & Radiant Dewy Foundation', explanation: 'Lightweight coverage that lets natural skin shine through for daytime and casual outings.', basePrice: 230 },
+          { name: 'Crease-Proof Brightening & Sculpting Concealer', explanation: 'High-pigment concealer for under-eye brightening, spot coverage, and clean brow carving.', basePrice: 145 },
+          { name: 'Translucent & Banana Loose Setting Powder', explanation: 'Finely milled powder that sets under-eyes and T-zone while controlling shine without flashback.', basePrice: 175 },
+          { name: 'Pressed Setting & Touch-Up Compact Powder', explanation: 'Portable compact for quick shine control on the go during parties, weddings, and workdays.', basePrice: 155 },
+          { name: 'Cream & Powder Blush Palette', explanation: 'Warm rose, peach, and berry pigments that bring healthy flush and warmth to cheeks.', basePrice: 185 },
+          { name: 'Cream & Powder Bronzer + Contour Duo', explanation: 'Defines cheekbones, jawline, and forehead with natural shadow and sun-kissed warmth.', basePrice: 195 },
+          { name: 'Liquid & Powder Champagne Highlighter', explanation: 'Catches light on cheekbones, brow bones, and cupid’s bow for a luminous glow.', basePrice: 160 },
+          { name: '18-Shade Neutral, Warm & Glam Eyeshadow Palette', explanation: 'Matte transition shades, shimmers, and glitters for soft daytime looks or bold evening eyes.', basePrice: 285 },
+          { name: 'Precision Liquid & Gel Eyeliner Pen', explanation: 'Fine-tip liner for sharp wings, tightlining, and clean definition that resists smudging.', basePrice: 115 },
+          { name: 'Kohl Eye Pencil (Black, Brown & Nude)', explanation: 'Smooth waterline pencil for dramatic eyes or brightening inner rims.', basePrice: 85 },
+          { name: 'Lengthening & Volumizing Mascara', explanation: 'Lifts, separates, and coats lashes from root to tip with rich black pigment.', basePrice: 135 },
+          { name: '3D Faux Mink & Wispy Strip Lashes (5-Pair Pack)', explanation: 'Reusable wispy, flared, and glam lash styles with flexible bands for comfortable wear.', basePrice: 140 },
+          { name: 'Ultra-Fine Brow Pencil, Pomade & Clear Brow Gel', explanation: 'Shapes, fills sparse gaps, and locks brow hairs in place all day.', basePrice: 130 },
+          { name: 'Velvet Matte & Satin Bullet Lipsticks', explanation: 'Richly pigmented lipsticks in nudes, browns, berries, and classic reds for every occasion.', basePrice: 120 },
+          { name: 'High-Shine Lip Gloss & Plumping Oil', explanation: 'Non-sticky glossy finish that layers over lipstick or shines solo.', basePrice: 95 },
+          { name: 'Precision Lip Liner Pencils', explanation: 'Defines and shapes lips to prevent feathering and create fuller-looking contours.', basePrice: 75 },
+          { name: 'Long-Lasting Makeup Setting & Fixing Spray', explanation: 'Melts powder layers together and locks makeup in place for weddings, parties, and hot weather.', basePrice: 170 },
+          { name: '15-Piece Face & Eye Makeup Brush Set', explanation: 'Complete set of foundation, powder, blush, contour, blending, and detail brushes in a roll/case.', basePrice: 320 },
+          { name: 'Microfiber Beauty Blending Sponges (3-Pack)', explanation: 'Expands when damp for seamless foundation, concealer, and cream blush blending.', basePrice: 95 }
         ]
       },
       'tupperware': {
         pageId: 'page-tupperware',
         title: 'Tupperware Products Page',
-        badge: 'MANKONJENI TUPPERWARE COLLECTION',
-        overview: 'Durable, space-saving food storage, fridge & pantry containers, and meal-prep jugs with tight seals—delivered across Johannesburg, Soweto, Bez Valley & surrounding areas.',
-        scaleTitle: 'Container Capacity Measurement Scale (Litres)',
+        badge: 'COMPLETE TUPPERWARE CATALOG — SPOONS TO LARGE DISHES',
+        overview: 'Every kitchen, dining, and storage essential—from measuring spoons, tasting spoons, cups, tumblers, and lunch boxes up to mixing bowls, fridge containers, pantry canisters, pitchers, and large serving dishes.',
+        scaleTitle: 'Capacity & Size Measurement Scale (ml / Litres)',
         scaleUnit: 'L Capacity',
-        minVal: 0.5,
+        minVal: 0.25,
         maxVal: 10,
-        stepVal: 0.5,
-        defaultVal: 3.5,
-        scaleCaption: (v) => v <= 2 ? 'Snacks, Spices, Sauces & Fridge Leftovers' : (v <= 5.5 ? 'Family Meal Prep, Rice, Sugar & Salads' : 'Bulk Pantry Staples, Flour, Maize & Beverages'),
-        optionsLabel: 'Set Style / Lid Accent',
-        options: ['Warm Beige & Cream', 'Caramel Brown & Sand', 'Clear Crystal Seal', 'Family Multi-Pack'],
-        pricePerStep: 42,
+        stepVal: 0.25,
+        defaultVal: 2.5,
+        scaleCaption: (v) => v < 1 ? 'Mini / Small Scale — Spoons, Spice Cups, Dips & Snack Portions' : (v <= 4.5 ? 'Medium Scale — Cups, Bowls, Lunch Boxes & Fridge Storage' : 'Large / Family Scale — Big Serving Dishes, Pitchers & Bulk Pantry Storage'),
+        optionsLabel: 'Color / Finish Style',
+        options: ['Warm Beige & Cream', 'Light Brown & Caramel', 'Crystal Clear & Sand', 'Mixed Kitchen Set'],
+        pricePerStep: 18,
         products: [
-          {
-            name: 'Airtight Pantry & Dry Goods Canister Set',
-            explanation: 'Keeps rice, flour, sugar, coffee, and oats crisp and dry with snap-tight moisture-lock seals that stack neatly in cupboards.',
-            basePrice: 540
-          },
-          {
-            name: 'FridgeSmart & Meal-Prep Storage Duo',
-            explanation: 'Designed to organize fresh produce, cooked meals, and leftovers cleanly while preventing spills and odor transfer.',
-            basePrice: 390
-          },
-          {
-            name: 'Large Serving Bowl & Pouring Pitcher Set',
-            explanation: 'Ideal for family gatherings, salads, cold drinks, and kitchen prep with easy-grip sides and secure covers.',
-            basePrice: 460
-          }
+          { name: 'Measuring & Tasting Spoon Set (5-Piece)', explanation: 'Accurate spoon measures for baking, cooking, spices, coffee, and daily kitchen prep.', basePrice: 95 },
+          { name: 'Long-Handle Stirring & Serving Spoons', explanation: 'Sturdy spoons for mixing batters, serving sauces, and dishing from deep pots.', basePrice: 125 },
+          { name: 'Everyday Drinking Cups / Tumblers (4-Pack)', explanation: 'Lightweight, shatter-resistant cups for water, juice, cold drinks, and family meals.', basePrice: 240 },
+          { name: 'Sealed Sippy & On-the-Go Travel Cups (2-Pack)', explanation: 'Spill-resistant cups with secure lids for kids, school, car rides, and desks.', basePrice: 220 },
+          { name: 'Small Snack & Dip Containers (4-Pack)', explanation: 'Compact mini containers for nuts, berries, sauces, olives, or lunchbox treats.', basePrice: 180 },
+          { name: ' divided Lunchbox & School/Work Meal Carrier', explanation: 'Keeps mains, sides, and snacks neatly separated without leaking in bags.', basePrice: 265 },
+          { name: 'FridgeSmart Vegetable & Fruit Keeper', explanation: 'Ventilated/sealed fridge storage designed to keep fresh produce crisp and organized.', basePrice: 340 },
+          { name: 'Butter, Cheese & Deli Spread Keeper', explanation: 'Compact covered dish sized for butter blocks, cheese, or spreads in the fridge or table.', basePrice: 155 },
+          { name: 'Egg Holder & Fridge Organizer Tray', explanation: 'Protects eggs and keeps refrigerator shelves tidy and easy to reach.', basePrice: 230 },
+          { name: 'Airtight Sugar, Coffee & Tea Canisters (3-Pack)', explanation: 'Moisture-blocking seals that keep daily kitchen staples fresh and clump-free.', basePrice: 390 },
+          { name: 'Tall Pantry Canisters (Rice, Flour, Maize & Pasta)', explanation: 'Generous upright storage containers for bulk dry goods with tight-fitting lids.', basePrice: 480 },
+          { name: 'Clear Modular Storage Containers (Stackable)', explanation: 'See-through containers that stack neatly to maximize cupboard and pantry space.', basePrice: 360 },
+          { name: 'Allegra / Mixing & Prep Bowls (Small to Medium)', explanation: 'Versatile bowls for prepping ingredients, whisking, salads, and serving sides.', basePrice: 310 },
+          { name: 'Large Family Mixing & Salad Dish (Big Bowl)', explanation: 'Extra-large dish ideal for big salads, party prep, dough mixing, and family dinners.', basePrice: 495 },
+          { name: 'Large Covered Serving & Buffet Dish with Lid', explanation: 'Spacious dish with a secure cover for transporting and serving main dishes at events.', basePrice: 560 },
+          { name: 'Sealable Fridge & Freezer Storage Tubs (Set of 3)', explanation: 'Durable tubs for batch-cooked meals, marinated meats, and freezer leftovers.', basePrice: 330 },
+          { name: 'Water & Juice Pitcher / Jug with Pour Spout', explanation: 'Drip-free pouring jug with lid for water, cordials, iced tea, and table service.', basePrice: 350 },
+          { name: 'Complete Kitchen Starter & Family Dish Bundle', explanation: 'Combined set of spoons, cups, storage tubs, and large serving dish for new homes.', basePrice: 980 }
         ]
       },
       'hair-styling': {
         pageId: 'page-hair-styling',
         title: 'Hair Dressing & Styling Page',
-        badge: 'HAIR DRESSING & STYLING ESSENTIALS',
-        overview: 'Nourishing hair oils, silk edge controls, heat-protectant serums, and styling tools for wigs, braids, and natural hair—delivered to your home in JHB, Soweto, Bez Valley & nearby areas.',
+        badge: 'COMPLETE HAIR DRESSING & STYLING CATALOG',
+        overview: 'Everything needed for hair dressing, wig & weave care, braiding, silk presses, and natural hair styling—oils, gels, sprays, shampoos, conditioners, brushes, combs, and accessories.',
         scaleTitle: 'Styling Length & Hold Measurement Scale (Inches)',
         scaleUnit: '" Length / Hold',
         minVal: 8,
         maxVal: 36,
         stepVal: 2,
         defaultVal: 20,
-        scaleCaption: (v) => v <= 14 ? 'Short Bob / Cropped Style & Sleek Edge Control' : (v <= 24 ? 'Mid-Length Bounce, Silk Press & Soft Hold' : 'Extra-Long Flowing Lengths & High-Slip Shine Control'),
-        optionsLabel: 'Formula / Finish',
-        options: ['Silk Gloss Oil', '24hr Firm Edge Hold', 'Moisture Curl Cream', 'Heat Shield Mist'],
-        pricePerStep: 25,
+        scaleCaption: (v) => v <= 14 ? 'Short Bob / Cropped Style & Sleek Edge Control (8"–14")' : (v <= 24 ? 'Mid-Length Bounce, Silk Press & Soft Hold (16"–24")' : 'Extra-Long Flowing Lengths & High-Slip Shine Control (26"–36")'),
+        optionsLabel: 'Finish / Care Type',
+        options: ['Silk Gloss Finish', 'Firm Edge Hold', 'Curl & Coil Moisture', 'Wig & Weave Care'],
+        pricePerStep: 15,
         products: [
-          {
-            name: 'Luxe Argan & Silk Shine Hair Elixir',
-            explanation: 'Smooths frizz, adds mirror-like shine to natural hair and extensions, and softens coarse ends without weighing hair down.',
-            basePrice: 195
-          },
-          {
-            name: 'Non-Flaking Edge & Sleek Styling Gel',
-            explanation: 'Lays baby hairs and sleek ponytails cleanly with humidity resistance and zero white residue.',
-            basePrice: 145
-          },
-          {
-            name: 'Thermal Protectant & Curl Defining Mist',
-            explanation: 'Shields strands from blow-dryer and flat-iron heat while reviving soft waves and bouncy curls.',
-            basePrice: 210
-          }
+          { name: 'Argan & Castor Growth Hair Oil', explanation: 'Nourishing oil for scalp massage, dryness relief, and healthy hair shine.', basePrice: 165 },
+          { name: 'Lightweight Wig & Extension Silk Sheen Spray', explanation: 'Adds soft slip and shine to wigs, weaves, and extensions without stiffness.', basePrice: 150 },
+          { name: '24-Hour Firm Hold Edge Control Gel', explanation: 'Smooths baby hairs and flyaways cleanly with a non-white, non-flaking finish.', basePrice: 135 },
+          { name: 'Braiding & Loc Scalp Soothing Oil Mist', explanation: 'Relieves tightness and dryness along braids, twists, and locs.', basePrice: 145 },
+          { name: 'Curl & Coil Defining Leave-In Conditioner', explanation: 'Hydrates and defines curls, waves, and coils while reducing frizz.', basePrice: 185 },
+          { name: 'Heat Protectant Thermal Serum', explanation: 'Protects hair from blow-dryers, flat irons, and curling wands while boosting smoothness.', basePrice: 175 },
+          { name: 'Moisturizing Shampoo & Deep Conditioner Duo', explanation: 'Cleanses buildup gently and restores softness and moisture to natural or styled hair.', basePrice: 270 },
+          { name: 'Lace Tint Mousse & Wig Melting Foam', explanation: 'Creates a soft, clean hold along lace frontals and closures for natural blending.', basePrice: 160 },
+          { name: 'Paddle Brush, Wide-Tooth Comb & Rat-Tail Comb Set', explanation: 'Essential styling tools for detangling, parting, and clean sectioning.', basePrice: 155 },
+          { name: 'Satin Bonnet, Edge Scarf & Silk Pillowcase Set', explanation: 'Protects hairstyles, edges, and moisture overnight while reducing friction.', basePrice: 210 }
         ]
       },
       'herbal-medication': {
         pageId: 'page-herbal-medication',
         title: 'Herbal Medication Page',
-        badge: 'TRADITIONAL & BOTANICAL HERBAL WELLNESS',
-        overview: 'Plant-based herbal infusions, tonics, and daily wellness blends prepared by Mankonjeni with clear usage guides—home delivered across Johannesburg, Soweto, Bez Valley & surrounds.',
+        badge: 'COMPLETE HERBAL & BOTANICAL WELLNESS CATALOG',
+        overview: 'Traditional and botanical herbal preparations, tonics, teas, infusions, and wellness blends curated by Mankonjeni with clear dosage guidance and home delivery.',
         scaleTitle: 'Bottle / Infusion Volume Measurement Scale (ml)',
         scaleUnit: 'ml Volume',
         minVal: 100,
         maxVal: 1000,
         stepVal: 50,
         defaultVal: 500,
-        scaleCaption: (v) => v <= 250 ? 'Travel / Trial Bottle (~1–2 Weeks of Daily Use)' : (v <= 600 ? 'Standard Monthly Household Wellness Bottle' : 'Family / Extended Bulk Supply Bottle'),
-        optionsLabel: 'Preparation Type',
-        options: ['Liquid Herbal Tonic', 'Loose Herbal Tea Blend', 'Warming Root Infusion', 'Daily Wellness Pack'],
-        pricePerStep: 18,
+        scaleCaption: (v) => v <= 250 ? 'Compact / Trial Bottle (100–250 ml)' : (v <= 600 ? 'Standard Monthly Household Bottle (300–600 ml)' : 'Extended / Family Supply Bottle (650–1000 ml)'),
+        optionsLabel: 'Preparation Format',
+        options: ['Liquid Herbal Tonic', 'Herbal Tea Infusion', 'Root & Bark Decoction', 'Wellness Combo'],
+        pricePerStep: 12,
         products: [
-          {
-            name: 'Mankonjeni Daily Immune & Vitality Tonic',
-            explanation: 'Botanical herbal extract formulated to support everyday energy, resilience, and general bodily balance.',
-            basePrice: 240
-          },
-          {
-            name: 'Soothing Digestive & Stomach Comfort Blend',
-            explanation: 'Gentle herbal infusion crafted to ease post-meal heaviness and support calm digestion.',
-            basePrice: 185
-          },
-          {
-            name: 'Evening Rest & Joint Relief Herbal Infusion',
-            explanation: 'Calming traditional plant blend suited for winding down after long days and supporting relaxed recovery.',
-            basePrice: 220
-          }
+          { name: 'Daily Immune & Vitality Herbal Tonic', explanation: 'Botanical herbal tonic crafted to support everyday energy, stamina, and general wellness.', basePrice: 220 },
+          { name: 'Digestive & Stomach Soothing Herbal Blend', explanation: 'Gentle herbal formula designed to support comfortable digestion after meals.', basePrice: 180 },
+          { name: 'Respiratory & Seasonal Throat/Chest Infusion', explanation: 'Warming herbal blend traditionally used for seasonal comfort and clear breathing.', basePrice: 195 },
+          { name: 'Joint, Back & Muscle Comfort Herbal Rub & Tonic', explanation: 'Formulated to support ease and relaxation after physical strain or long days.', basePrice: 245 },
+          { name: 'Calm Sleep & Stress Relief Herbal Tea', explanation: 'Soothing evening botanical blend to help unwind and prepare for restful sleep.', basePrice: 165 },
+          { name: 'Women’s Monthly Balance & Wellness Infusion', explanation: 'Traditional botanical blend supporting comfort and balance through monthly cycles.', basePrice: 210 },
+          { name: 'Detox & Cleansing Herbal Tea / Tonic', explanation: 'Supports natural hydration and routine wellness cleansing.', basePrice: 205 }
         ]
       },
       'bridal-events': {
         pageId: 'page-bridal-events',
         title: 'Bridal & Events Makeup at Home Page',
-        badge: 'AT-HOME BRIDAL & EVENT MAKEUP SERVICE',
-        overview: 'On-location bridal, lobola/traditional wedding, matric dance, birthday, and party makeup done right in the comfort of your home across Johannesburg, Soweto, Bez Valley & surrounding areas.',
+        badge: 'AT-HOME MAKEUP FOR BRIDALS & ALL EVENTS',
+        overview: 'Professional makeup applied directly at your home across Johannesburg, Soweto, Bez Valley, and surrounding areas—tailored for weddings, traditional/lobola ceremonies, matric dances, birthdays, baby showers, parties, graduations, and photoshoots.',
         scaleTitle: 'Faces / Prep-Time Measurement Scale (People)',
         scaleUnit: ' People (Home Call-Out)',
         minVal: 1,
         maxVal: 10,
         stepVal: 1,
         defaultVal: 1,
-        scaleCaption: (v) => v === 1 ? 'Solo At-Home Glam (~1.5 hrs prep for 1 person)' : (v <= 4 ? 'Bridal / Small Group Home Session (~2.5–3.5 hrs)' : 'Full Bridal Party / Event Squad Session (Multi-artist / Timed Schedule)'),
-        optionsLabel: 'Look Style',
-        options: ['Soft Radiant Bridal', 'Full Glam & Lashes', 'Traditional / Lobola Glow', 'Editorial / Event Glam'],
-        pricePerStep: 450,
+        scaleCaption: (v) => v === 1 ? '1 Person At-Home Session (~1.5 hrs)' : (v <= 4 ? 'Small Group / Bridal & Close Family at Home (~2.5–3.5 hrs)' : 'Full Bridal Party / Event Squad at Home (Scheduled Multi-Look Prep)'),
+        optionsLabel: 'Event Look Style',
+        options: ['Soft Radiant Glam', 'Full Glam & Lashes', 'Bridal / Traditional Glow', 'Party / Editorial Glam'],
+        pricePerStep: 420,
         products: [
-          {
-            name: 'At-Home Bridal & Traditional Wedding Glam',
-            explanation: 'Includes skin prep, custom complexion matching, long-wear photo-ready makeup, false lashes, and touch-up notes at your home.',
-            basePrice: 1450
-          },
-          {
-            name: 'Event, Matric Dance, Birthday & Party Makeup',
-            explanation: 'Tailored glam applied at your home in Johannesburg, Soweto, Bez Valley, or nearby areas so you get ready stress-free.',
-            basePrice: 650
-          },
-          {
-            name: 'Bridal Squad / Family Home Booking Package',
-            explanation: 'Coordinated at-home makeup session for bridesmaids, mothers, and guests with seamless timing before your ceremony or event.',
-            basePrice: 1850
-          }
+          { name: 'White Wedding Bridal Makeup at Home', explanation: 'Full bridal glam at your home including skin prep, long-wear complexion, custom lashes, and ceremony-ready finish.', basePrice: 1550 },
+          { name: 'Traditional Wedding / Lobola / Umabo Makeup at Home', explanation: 'Culturally tailored radiant or full glam at your home designed to complement traditional attire and photography.', basePrice: 1350 },
+          { name: 'Matric Dance / Prom Makeup at Home', explanation: 'Photo-ready glam applied at your home so you arrive relaxed, glowing, and camera-ready.', basePrice: 750 },
+          { name: 'Birthday, Anniversary & Party Glam at Home', explanation: 'Custom soft or bold glam done at home for milestone birthdays, dinners, and celebrations.', basePrice: 650 },
+          { name: 'Baby Shower, Kitchen Tea & Bridal Shower Makeup at Home', explanation: 'Fresh, glowing, long-lasting makeup applied at home for hosts, moms-to-be, and guests.', basePrice: 700 },
+          { name: 'Graduation, Corporate Event & Studio/Outdoor Photoshoot Makeup', explanation: 'Camera-balanced, crease-resistant makeup at your home for graduations, galas, and shoots.', basePrice: 680 },
+          { name: 'Bridal Squad / Group Home Booking (Bridesmaids, Moms & Guests)', explanation: 'Coordinated at-home makeup booking for multiple guests at one residence with structured timing.', basePrice: 1950 }
         ]
       }
     };
@@ -482,22 +470,21 @@
     function computeItemPrice(basePrice, pageKey, scaleVal) {
       const cfg = DEPARTMENT_PAGES[pageKey];
       const steps = (scaleVal - cfg.defaultVal) / cfg.stepVal;
-      return Math.max(50, Math.round(basePrice + steps * cfg.pricePerStep));
+      return Math.max(45, Math.round(basePrice + steps * cfg.pricePerStep));
     }
 
     function renderAllPages() {
-      // Home cards for the 5 separate pages
       const homeGrid = document.getElementById('home-pages-grid');
       homeGrid.innerHTML = Object.entries(DEPARTMENT_PAGES).map(([key, cfg]) => `
         <div class="glass-luxe rounded-3xl p-6 flex flex-col justify-between">
           <div>
             <span class="text-[10px] uppercase tracking-wider bg-[#fffdf9] border border-[#cfb99d] text-[#6f4524] px-3 py-1 rounded-full font-bold">
-              ${cfg.badge}
+              ${cfg.badge} (${cfg.products.length} Items)
             </span>
             <h2 class="font-luxury text-2xl sm:text-3xl font-bold text-[#2b1d14] mt-3">${cfg.title}</h2>
             <p class="text-xs sm:text-sm text-[#5c4636] mt-2 leading-relaxed">${cfg.overview}</p>
             <p class="text-[11px] text-[#6f4524] mt-3 bg-[#fffdf9] p-3 rounded-xl border border-[#dfd0bc] font-semibold">
-              Includes: Product explanations, ${cfg.scaleTitle}, ZAR prices & Cart redirect.
+              Includes: ${cfg.products.length} full catalog entries, explanations, ${cfg.scaleTitle}, ZAR prices & Cart redirect.
             </p>
           </div>
           <button onclick="redirectToPage('${key}')" class="mt-5 w-full py-3 rounded-xl luxe-btn font-extrabold text-xs uppercase tracking-wider shadow transition">
@@ -506,7 +493,6 @@
         </div>
       `).join('');
 
-      // Render each of the 5 separate pages
       Object.entries(DEPARTMENT_PAGES).forEach(([key, cfg]) => {
         const sec = document.getElementById(cfg.pageId);
         const st = pageInteractiveState[key];
@@ -516,7 +502,7 @@
           <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
             <div>
               <a href="?page=home" onclick="onPageLink(event, 'home')" class="text-xs text-[#8b5a2b] hover:underline font-bold mb-1 inline-block">← Back to Home</a>
-              <span class="block text-xs uppercase tracking-widest text-[#8b5a2b] font-bold">${cfg.badge}</span>
+              <span class="block text-xs uppercase tracking-widest text-[#8b5a2b] font-bold">${cfg.badge} • ${cfg.products.length} ITEMS</span>
               <h2 class="font-luxury text-3xl sm:text-5xl font-bold text-[#2b1d14]">${cfg.title}</h2>
             </div>
             <div class="flex items-center gap-2">
@@ -543,7 +529,6 @@
                 <span id="scale-readout-${key}" class="font-luxury text-3xl font-bold brown-gradient-text">${st.scaleVal}${cfg.scaleUnit}</span>
               </div>
 
-              <!-- Visual Measurement Bar / Ruler -->
               <div class="w-full h-4 bg-[#efe6d8] rounded-full overflow-hidden border border-[#d7c3a8]">
                 <div id="scale-bar-${key}" class="scale-bar-fill h-full bg-[#8b5a2b]" style="width:${pct}%"></div>
               </div>
@@ -600,8 +585,8 @@
             </div>
           </div>
 
-          <!-- Specific Products & Explanations Grid -->
-          <h3 class="font-luxury text-2xl sm:text-3xl font-bold text-[#2b1d14] mb-4">${cfg.title} — Offerings & ZAR Prices</h3>
+          <!-- Full Catalog Grid for This Page -->
+          <h3 class="font-luxury text-2xl sm:text-3xl font-bold text-[#2b1d14] mb-4">${cfg.title} — Full Catalog & ZAR Prices (${cfg.products.length})</h3>
           <div id="dept-items-${key}" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
         `;
 
@@ -865,4 +850,4 @@
     renderActivePage(getCurrentPageFromUrl());
   </script>
 </body>
-        </html>
+</html>
