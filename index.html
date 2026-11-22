@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MANKONJENI ATELIER | Live Glass Wallpaper — Perfumes, Makeup, Tupperware, Hair, Herbal & Bridal</title>
+  <title>MANKONJENI ATELIER | Vivid Live Glass Wallpaper — Perfumes, Makeup, Tupperware, Hair, Herbal & Bridal</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -22,14 +22,14 @@
     }
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: transparent;
+      background-color: #f3eadc;
       color: var(--espresso-ink);
       padding-bottom: 84px;
     }
     @media (min-width: 768px) {
       body { padding-bottom: 0; }
     }
-    /* Full-screen live animated wallpaper canvas */
+    /* Vivid full-screen live wallpaper canvas */
     #live-wallpaper-canvas {
       position: fixed;
       inset: 0;
@@ -38,23 +38,19 @@
       z-index: -2;
       display: block;
     }
-    /* Soft glassy light-veil over canvas so text always pops cleanly */
+    /* Light glass veil kept subtle so vivid motion shines clearly while keeping text high-contrast */
     .wallpaper-glass-veil {
       position: fixed;
       inset: 0;
       z-index: -1;
       pointer-events: none;
-      background:
-        radial-gradient(circle at 18% 15%, rgba(250, 246, 240, 0.58) 0%, transparent 48%),
-        radial-gradient(circle at 85% 78%, rgba(228, 214, 195, 0.52) 0%, transparent 52%),
-        linear-gradient(180deg, rgba(250, 246, 240, 0.34) 0%, rgba(239, 230, 216, 0.42) 100%);
-      backdrop-filter: blur(2px);
+      background: linear-gradient(180deg, rgba(250, 246, 240, 0.14) 0%, rgba(239, 230, 216, 0.22) 100%);
     }
     .font-luxury {
       font-family: 'Cormorant Garamond', serif;
     }
     .brown-gradient-text {
-      background: linear-gradient(135deg, #573216 0%, #9c673d 52%, #c69a68 100%);
+      background: linear-gradient(135deg, #4e2b10 0%, #9b6439 50%, #c79862 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -68,13 +64,13 @@
     .glass-luxe {
       position: relative;
       overflow: hidden;
-      background: linear-gradient(145deg, rgba(255, 253, 249, 0.76) 0%, rgba(239, 230, 216, 0.68) 100%);
-      backdrop-filter: blur(18px) saturate(135%);
-      -webkit-backdrop-filter: blur(18px) saturate(135%);
-      border: 1px solid rgba(255, 253, 249, 0.85);
+      background: linear-gradient(145deg, rgba(255, 253, 249, 0.68) 0%, rgba(239, 230, 216, 0.56) 100%);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      border: 1px solid rgba(255, 253, 249, 0.88);
       box-shadow:
-        0 18px 40px -14px rgba(92, 61, 40, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        0 18px 40px -14px rgba(86, 54, 31, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.92);
       transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
     }
     .glass-luxe::before {
@@ -82,25 +78,25 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      background: linear-gradient(115deg, transparent 20%, rgba(255, 253, 249, 0.45) 50%, transparent 80%);
+      background: linear-gradient(115deg, transparent 20%, rgba(255, 253, 249, 0.5) 50%, transparent 80%);
       transform: translateX(-120%);
       transition: transform 0.85s ease;
     }
     .glass-luxe:hover {
       transform: translateY(-3px);
-      border-color: rgba(164, 113, 72, 0.65);
+      border-color: rgba(164, 113, 72, 0.72);
       box-shadow:
-        0 24px 48px -14px rgba(139, 90, 43, 0.28),
-        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+        0 24px 48px -14px rgba(139, 90, 43, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.96);
     }
     .glass-luxe:hover::before {
       transform: translateX(120%);
     }
     .cream-card {
-      background: rgba(255, 253, 249, 0.82);
+      background: rgba(255, 253, 249, 0.78);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(223, 208, 188, 0.9);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(223, 208, 188, 0.92);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88);
     }
     .store-page { display: none; }
     .store-page.active { display: block; animation: pageFade 0.25s ease-out; }
@@ -116,7 +112,7 @@
 </head>
 <body class="antialiased selection:bg-[#d8c3a5] selection:text-[#2b1d14] relative">
 
-  <!-- Live Moving Glass Wallpaper Canvas + Subtle Frosted Veil -->
+  <!-- Vivid Live Glass Wallpaper Canvas + Light Veil -->
   <canvas id="live-wallpaper-canvas"></canvas>
   <div class="wallpaper-glass-veil"></div>
 
@@ -192,7 +188,7 @@
         <h1 class="font-luxury text-4xl sm:text-6xl font-bold leading-tight text-[#2b1d14]">
           Curated by <span class="brown-gradient-text italic">Mankonjeni</span>, Delivered to Your Door.
         </h1>
-        <p class="text-sm sm:text-base text-[#4a3525] leading-relaxed max-w-2xl mx-auto lg:mx-0">
+        <p class="text-sm sm:text-base text-[#3d291c] leading-relaxed max-w-2xl mx-auto lg:mx-0">
           Home delivery across <strong>Johannesburg, Soweto, Bez Valley</strong>, and surrounding areas. Explore separate pages for <strong>Glass & High-Concentration Oil Perfumes (Men & Women)</strong>, <strong>Makeup Kits</strong>, <strong>Tupperware</strong>, <strong>Hair Dressing & Styling</strong>, <strong>Herbal Medication</strong>, and <strong>Bridal & Events Makeup at Home</strong>—with interactive measurement scales, detailed notes, ZAR pricing, and cart checkout via <strong>+27 64 017 7796 (Thoe)</strong>.
         </p>
 
@@ -215,7 +211,7 @@
       <!-- Delivery Zones & Dedicated Pages Quick Card -->
       <div class="lg:col-span-5 cream-card rounded-2xl p-5 space-y-3">
         <p class="text-xs uppercase tracking-widest text-[#8b5a2b] font-extrabold">Home Delivery Zones & Dedicated Pages</p>
-        <p class="text-xs text-[#4a3525] leading-relaxed">
+        <p class="text-xs text-[#3d291c] leading-relaxed">
           <strong>Johannesburg</strong> (CBD, Sandton, Rosebank, Yeoville, Kensington), <strong>Soweto</strong> (Orlando, Dobsonville, Maponya/Kliptown, Meadowlands), <strong>Bez Valley</strong> (Bezuidenhout Valley, Bruma, Observatory) & surrounding suburbs.
         </p>
         <div class="grid grid-cols-1 gap-1.5 pt-1 text-xs font-bold">
@@ -361,8 +357,8 @@
   </div>
 
   <script>
-    // ==================== LIVE MOVING GLASS WALLPAPER ENGINE ====================
-    (function startLiveGlassWallpaper() {
+    // ==================== VIVID LIVE GLASS WALLPAPER ENGINE ====================
+    (function startVividLiveWallpaper() {
       const canvas = document.getElementById('live-wallpaper-canvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
@@ -370,21 +366,35 @@
       let pointerX = 0.5, pointerY = 0.5;
       let smoothX = 0.5, smoothY = 0.5;
 
+      // High-contrast light-brown, warm beige & cream silk waves
       const ribbons = [
-        { baseY: 0.22, amp: 58, freq: 0.0022, speed: 0.00075, phase: 0.0, fill: 'rgba(216, 187, 150, 0.42)', stroke: 'rgba(255, 253, 249, 0.72)' },
-        { baseY: 0.48, amp: 74, freq: 0.0018, speed: -0.00055, phase: 1.9, fill: 'rgba(184, 138, 94, 0.26)', stroke: 'rgba(255, 252, 246, 0.65)' },
-        { baseY: 0.72, amp: 64, freq: 0.0025, speed: 0.00065, phase: 3.7, fill: 'rgba(228, 206, 176, 0.46)', stroke: 'rgba(255, 255, 255, 0.78)' },
-        { baseY: 0.88, amp: 46, freq: 0.0030, speed: -0.0008, phase: 5.1, fill: 'rgba(164, 113, 72, 0.20)', stroke: 'rgba(250, 246, 240, 0.6)' }
+        { baseY: 0.20, amp: 95, freq: 0.0028, speed: 0.0019, phase: 0.0, fill: 'rgba(186, 138, 92, 0.34)', stroke: 'rgba(255, 255, 255, 0.92)', lw: 3 },
+        { baseY: 0.44, amp: 118, freq: 0.0022, speed: -0.0015, phase: 1.7, fill: 'rgba(155, 104, 60, 0.28)', stroke: 'rgba(255, 250, 240, 0.88)', lw: 3 },
+        { baseY: 0.68, amp: 105, freq: 0.0031, speed: 0.0017, phase: 3.4, fill: 'rgba(214, 178, 136, 0.44)', stroke: 'rgba(255, 255, 255, 0.95)', lw: 3.5 },
+        { baseY: 0.88, amp: 78, freq: 0.0036, speed: -0.0021, phase: 5.0, fill: 'rgba(139, 90, 43, 0.26)', stroke: 'rgba(255, 252, 245, 0.85)', lw: 2.5 }
       ];
 
-      const orbs = Array.from({ length: 16 }, (_, i) => ({
-        xRatio: (i * 0.17 + 0.08) % 1,
-        yRatio: (i * 0.29 + 0.12) % 1,
-        radius: 26 + (i % 5) * 24,
-        vx: ((i % 2 === 0 ? 1 : -1) * (0.00008 + (i % 4) * 0.00003)),
-        vy: ((i % 3 === 0 ? -1 : 1) * (0.00006 + (i % 3) * 0.000025)),
-        pulsePhase: i * 0.85,
-        isWarmBrown: i % 3 === 0
+      // Luminous floating glass bokeh & golden-brown light orbs
+      const orbs = Array.from({ length: 24 }, (_, i) => ({
+        xRatio: (i * 0.19 + 0.05) % 1,
+        yRatio: (i * 0.31 + 0.09) % 1,
+        radius: 34 + (i % 6) * 28,
+        vx: ((i % 2 === 0 ? 1 : -1) * (0.00024 + (i % 4) * 0.00009)),
+        vy: ((i % 3 === 0 ? -1 : 1) * (0.00018 + (i % 3) * 0.00007)),
+        pulsePhase: i * 0.72,
+        isRichBrown: i % 2 === 0
+      }));
+
+      // Floating rotating translucent glass facets / prisms
+      const glassShards = Array.from({ length: 12 }, (_, i) => ({
+        xRatio: (i * 0.23 + 0.11) % 1,
+        yRatio: (i * 0.37 + 0.14) % 1,
+        w: 58 + (i % 4) * 32,
+        h: 34 + (i % 3) * 20,
+        rot: i * 0.55,
+        rotSpeed: ((i % 2 === 0 ? 1 : -1) * (0.00045 + (i % 3) * 0.00015)),
+        vx: ((i % 2 === 0 ? -1 : 1) * 0.00016),
+        vy: ((i % 2 === 0 ? 1 : -1) * 0.00012)
       }));
 
       function resizeCanvas() {
@@ -413,45 +423,45 @@
       resizeCanvas();
 
       function drawFrame(now) {
-        smoothX += (pointerX - smoothX) * 0.04;
-        smoothY += (pointerY - smoothY) * 0.04;
-        const parallaxX = (smoothX - 0.5) * 34;
-        const parallaxY = (smoothY - 0.5) * 26;
+        smoothX += (pointerX - smoothX) * 0.06;
+        smoothY += (pointerY - smoothY) * 0.06;
+        const parallaxX = (smoothX - 0.5) * 65;
+        const parallaxY = (smoothY - 0.5) * 50;
 
-        // Animated warm cream, beige & light brown gradient backdrop
-        const shiftX = width * (0.5 + Math.cos(now * 0.00022) * 0.24 + (smoothX - 0.5) * 0.14);
-        const shiftY = height * (0.45 + Math.sin(now * 0.00019) * 0.24 + (smoothY - 0.5) * 0.14);
-        const bgGrad = ctx.createRadialGradient(shiftX, shiftY, Math.min(width, height) * 0.05, width * 0.5, height * 0.5, Math.max(width, height) * 0.95);
+        // Sweeping warm cream, beige & light-brown gradient backdrop
+        const shiftX = width * (0.5 + Math.cos(now * 0.00065) * 0.32 + (smoothX - 0.5) * 0.22);
+        const shiftY = height * (0.48 + Math.sin(now * 0.00055) * 0.28 + (smoothY - 0.5) * 0.22);
+        const bgGrad = ctx.createRadialGradient(shiftX, shiftY, Math.min(width, height) * 0.04, width * 0.5, height * 0.5, Math.max(width, height) * 0.95);
         bgGrad.addColorStop(0, '#fffdf9');
-        bgGrad.addColorStop(0.38, '#f4ecdf');
-        bgGrad.addColorStop(0.72, '#e6d7c1');
-        bgGrad.addColorStop(1, '#d7be9e');
+        bgGrad.addColorStop(0.35, '#efe2ce');
+        bgGrad.addColorStop(0.72, '#dec5a4');
+        bgGrad.addColorStop(1, '#c7a47b');
         ctx.fillStyle = bgGrad;
         ctx.fillRect(0, 0, width, height);
 
-        // Floating glowing glass bokeh orbs
+        // Moving luminous bokeh orbs
         for (const o of orbs) {
           o.xRatio += o.vx;
           o.yRatio += o.vy;
-          if (o.xRatio < -0.1) o.xRatio = 1.1;
-          if (o.xRatio > 1.1) o.xRatio = -0.1;
-          if (o.yRatio < -0.1) o.yRatio = 1.1;
-          if (o.yRatio > 1.1) o.yRatio = -0.1;
+          if (o.xRatio < -0.15) o.xRatio = 1.15;
+          if (o.xRatio > 1.15) o.xRatio = -0.15;
+          if (o.yRatio < -0.15) o.yRatio = 1.15;
+          if (o.yRatio > 1.15) o.yRatio = -0.15;
 
-          const pulse = 1 + Math.sin(now * 0.0014 + o.pulsePhase) * 0.12;
-          const cx = o.xRatio * width + parallaxX * (o.isWarmBrown ? 0.7 : 0.4);
-          const cy = o.yRatio * height + parallaxY * (o.isWarmBrown ? 0.7 : 0.4);
+          const pulse = 1 + Math.sin(now * 0.0028 + o.pulsePhase) * 0.2;
+          const cx = o.xRatio * width + parallaxX * (o.isRichBrown ? 0.9 : 0.5);
+          const cy = o.yRatio * height + parallaxY * (o.isRichBrown ? 0.9 : 0.5);
           const r = o.radius * pulse;
 
-          const orbGrad = ctx.createRadialGradient(cx - r * 0.25, cy - r * 0.25, r * 0.08, cx, cy, r);
-          if (o.isWarmBrown) {
-            orbGrad.addColorStop(0, 'rgba(255, 250, 242, 0.72)');
-            orbGrad.addColorStop(0.55, 'rgba(182, 134, 92, 0.24)');
-            orbGrad.addColorStop(1, 'rgba(164, 113, 72, 0)');
+          const orbGrad = ctx.createRadialGradient(cx - r * 0.2, cy - r * 0.2, r * 0.05, cx, cy, r);
+          if (o.isRichBrown) {
+            orbGrad.addColorStop(0, 'rgba(255, 251, 245, 0.88)');
+            orbGrad.addColorStop(0.5, 'rgba(164, 113, 72, 0.36)');
+            orbGrad.addColorStop(1, 'rgba(139, 90, 43, 0)');
           } else {
-            orbGrad.addColorStop(0, 'rgba(255, 255, 255, 0.82)');
-            orbGrad.addColorStop(0.6, 'rgba(235, 217, 192, 0.34)');
-            orbGrad.addColorStop(1, 'rgba(235, 217, 192, 0)');
+            orbGrad.addColorStop(0, 'rgba(255, 255, 255, 0.94)');
+            orbGrad.addColorStop(0.55, 'rgba(227, 199, 163, 0.45)');
+            orbGrad.addColorStop(1, 'rgba(227, 199, 163, 0)');
           }
           ctx.fillStyle = orbGrad;
           ctx.beginPath();
@@ -459,27 +469,53 @@
           ctx.fill();
         }
 
-        // Flowing translucent glass waves / silk ribbons
-        const step = Math.max(16, Math.floor(width / 55));
+        // Flowing silk waves with bright glass crest highlights
+        const step = Math.max(14, Math.floor(width / 64));
         for (const rib of ribbons) {
           ctx.beginPath();
           for (let x = -step; x <= width + step; x += step) {
             const wave1 = Math.sin(x * rib.freq + now * rib.speed + rib.phase) * rib.amp;
-            const wave2 = Math.cos(x * (rib.freq * 1.6) - now * (rib.speed * 0.7) + rib.phase) * (rib.amp * 0.35);
-            const y = height * rib.baseY + wave1 + wave2 + parallaxY * 0.55;
-            const px = x + parallaxX * 0.35;
+            const wave2 = Math.cos(x * (rib.freq * 1.75) - now * (rib.speed * 0.85) + rib.phase) * (rib.amp * 0.42);
+            const y = height * rib.baseY + wave1 + wave2 + parallaxY * 0.7;
+            const px = x + parallaxX * 0.45;
             if (x === -step) ctx.moveTo(px, y);
             else ctx.lineTo(px, y);
           }
           ctx.strokeStyle = rib.stroke;
-          ctx.lineWidth = 2;
+          ctx.lineWidth = rib.lw;
           ctx.stroke();
 
-          ctx.lineTo(width + step + parallaxX * 0.35, height + 60);
-          ctx.lineTo(-step + parallaxX * 0.35, height + 60);
+          ctx.lineTo(width + step + parallaxX * 0.45, height + 80);
+          ctx.lineTo(-step + parallaxX * 0.45, height + 80);
           ctx.closePath();
           ctx.fillStyle = rib.fill;
           ctx.fill();
+        }
+
+        // Drifting rotating glass facets
+        for (const sh of glassShards) {
+          sh.xRatio += sh.vx;
+          sh.yRatio += sh.vy;
+          sh.rot += sh.rotSpeed * 16;
+          if (sh.xRatio < -0.15) sh.xRatio = 1.15;
+          if (sh.xRatio > 1.15) sh.xRatio = -0.15;
+          if (sh.yRatio < -0.15) sh.yRatio = 1.15;
+          if (sh.yRatio > 1.15) sh.yRatio = -0.15;
+
+          const sx = sh.xRatio * width + parallaxX * 0.65;
+          const sy = sh.yRatio * height + parallaxY * 0.65;
+
+          ctx.save();
+          ctx.translate(sx, sy);
+          ctx.rotate(sh.rot);
+          ctx.fillStyle = 'rgba(255, 253, 249, 0.28)';
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.72)';
+          ctx.lineWidth = 1.4;
+          ctx.beginPath();
+          ctx.roundRect(-sh.w / 2, -sh.h / 2, sh.w, sh.h, 12);
+          ctx.fill();
+          ctx.stroke();
+          ctx.restore();
         }
 
         requestAnimationFrame(drawFrame);
@@ -489,7 +525,7 @@
     })();
 
     const PHONE_THOE = '27640177796';
-    const CART_STORAGE_KEY = 'mankonjeni_atelier_cart_zar_v4';
+    const CART_STORAGE_KEY = 'mankonjeni_atelier_cart_zar_v5';
 
     const DEPARTMENT_PAGES = {
       'perfumes': {
@@ -704,7 +740,7 @@
               ${cfg.badge} (${cfg.products.length} Items)
             </span>
             <h2 class="font-luxury text-2xl sm:text-3xl font-bold text-[#2b1d14] mt-3">${cfg.title}</h2>
-            <p class="text-xs sm:text-sm text-[#4a3525] mt-2 leading-relaxed">${cfg.overview}</p>
+            <p class="text-xs sm:text-sm text-[#3d291c] mt-2 leading-relaxed">${cfg.overview}</p>
             <p class="text-[11px] text-[#6f4524] mt-3 bg-[#fffdf9]/85 p-3 rounded-xl border border-[#dfd0bc] font-semibold">
               Includes: ${cfg.products.length} catalog entries, notes & explanations, ${cfg.scaleTitle}, ZAR prices & Cart redirect.
             </p>
@@ -866,7 +902,7 @@
                 ${specSummary}
               </span>
               <h4 class="font-luxury text-2xl font-bold text-[#2b1d14] leading-snug">${prod.name}</h4>
-              <p class="text-xs sm:text-sm text-[#4a3525] mt-2 mb-4 leading-relaxed">${prod.explanation}</p>
+              <p class="text-xs sm:text-sm text-[#3d291c] mt-2 mb-4 leading-relaxed">${prod.explanation}</p>
             </div>
 
             <div>
